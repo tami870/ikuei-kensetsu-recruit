@@ -1,0 +1,6 @@
+@use "global" as *;
+
+main {
+  margin-top: var(--header-height);
+  font-family: $YuGothic-font;
+}

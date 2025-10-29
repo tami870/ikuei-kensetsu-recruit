@@ -1,0 +1,41 @@
+@use "global" as *;
+
+.section-title {
+  margin-inline: auto;
+  width: fit-content;
+}
+
+.section-title__ja {
+  font-size: rem(44);
+  letter-spacing: 0.1em;
+  font-weight: $bold;
+  text-align: center;
+  @include mq("md") {
+    font-size: rem(32);
+  }
+}
+
+.section-title__en {
+  margin-top: rem(5);
+  color: $green;
+  font-weight: $bold;
+  letter-spacing: 0.1em;
+  font-size: rem(16);
+  text-align: center;
+
+  @include mq("md") {
+    font-size: rem(14);
+  }
+}
+
+.page-section-title {
+  padding-left: rem(16);
+  border-left: 10px solid $green;
+  font-weight: $bold;
+  font-size: rem(28);
+  @include mq("md") {
+    font-size: rem(22);
+    padding-left: rem(8);
+    border-left: 5px solid $green;
+  }
+}

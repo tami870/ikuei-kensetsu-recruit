@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.breadcrumb {
+  color: $white;
+  font-size: rem(13);
+  line-height: calc(22 / 13);
+  text-align: right;
+  padding-top: rem(16);
+  @include mq("md") {
+    padding-top: rem(12);
+    font-size: rem(12);
+  }
+}
+
+.breadcrumb a {
+  text-decoration: underline;
+  transition: text-decoration 0.3s;
+}
+
+.breadcrumb a:hover {
+  text-decoration: none;
+}

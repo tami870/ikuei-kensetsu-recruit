@@ -29,6 +29,7 @@ dd {
 /* Set core root defaults */
 html {
   scroll-behavior: smooth;
+  // scroll-padding-top: 7.5rem;
 }
 
 /* Set core body defaults */
@@ -39,8 +40,7 @@ body {
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
-ul,
-ol {
+ul {
   list-style: none;
 }
 
@@ -54,6 +54,7 @@ img {
   max-width: 100%;
   display: block;
   width: 100%;
+  height: auto;
 }
 
 /* Natural flow and rhythm in articles by default */
@@ -73,7 +74,6 @@ select {
 img:not([alt]) {
   filter: blur(10px);
 }
-
 
 /* フォームリセット */
 input,
@@ -116,4 +116,8 @@ a {
   text-decoration: none;
   color: inherit;
   transition: opacity 0.3s;
+}
+
+html.is-fixed {
+  overflow: hidden;
 }

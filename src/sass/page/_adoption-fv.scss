@@ -1,0 +1,67 @@
+@use "global" as *;
+
+.adoption-fv {
+  position: relative;
+  width: 100%;
+  height: rem(657);
+  z-index: 10;
+  overflow: visible;
+
+  @include mq(md) {
+    height: auto;
+    aspect-ratio: 375 / 480;
+  }
+}
+
+.adoption-fv__inner {
+  position: relative;
+  width: 100%;
+  height: inherit;
+  overflow: hidden;
+}
+
+.adoption-fv__image {
+  width: 100%;
+  height: inherit;
+}
+
+.adoption-fv__image img {
+  width: 100%;
+  height: inherit;
+  object-fit: cover;
+  object-position: center;
+  // object-position: center 35%;
+  filter: brightness(0.8);
+  // transition: object-position 0.3s ease;
+}
+
+.adoption-fv__title {
+  position: absolute;
+  top: 38%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 80;
+  text-align: center;
+}
+
+.adoption-fv__title img {
+  width: rem(386);
+  height: auto;
+
+  @include mq(md) {
+    width: rem(224);
+    max-width: 80%;
+  }
+}
+
+.adoption-fv__breadcrumb {
+  position: absolute;
+  top: 0;
+  right: 9%;
+  z-index: 90;
+
+  @include mq("md") {
+    right: 5%;
+    top: rem(8);
+  }
+}

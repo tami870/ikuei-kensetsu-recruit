@@ -1,5 +1,5 @@
 // どっちファーストの設定（"sp" or "pc"）
-$startFrom: sp;
+$startFrom: pc;
 
 // デフォルト値を設定
 $mediaquerys: (
@@ -25,13 +25,12 @@ $mediaquerys: (
     lg: "screen and (min-width: #{map-get($breakpoints,'lg')}px)",
     xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
   );
-
 } @else {
   $breakpoints: (
     xl: 1440,
     lg: 1023,
     md: 767,
-    sm: 600,
+    sm: 389,
   );
   $mediaquerys: (
     sm: "screen and (max-width: #{map-get($breakpoints,'sm')}px)",
@@ -39,8 +38,6 @@ $mediaquerys: (
     lg: "screen and (max-width: #{map-get($breakpoints,'lg')}px)",
     xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
   );
-
-
 }
 
 // @include mq(){}で書くとブレークポイントが反映される（初期値はmd）
@@ -50,13 +47,12 @@ $mediaquerys: (
   }
 }
 
-
 @if $startFrom == sp {
   //pcで表示
   .u-desktop {
-    display: none;
+    display: none !important;
     @include mq("md") {
-      display: block;
+      display: flex !important;
     }
   }
 
@@ -64,6 +60,51 @@ $mediaquerys: (
   .u-mobile {
     @include mq("md") {
       display: none;
+    }
+  }
+
+  /* 414px以下で改行 */
+  .br-414-less {
+    @media screen and (min-width: 414px) {
+      display: none;
+    }
+  }
+
+  /* 500px以下で改行 */
+  .br-500-less {
+    @media screen and (min-width: 500px) {
+      display: none;
+    }
+  }
+
+  /* 1000px以下で改行 */
+  .br-1000-less {
+    @include mq("md") {
+      display: none;
+    }
+  }
+
+  /* 1000px以上で改行 */
+  .br-1000-more {
+    display: none;
+    @media screen and (min-width: 1000px) {
+      display: block;
+    }
+  }
+
+  /* 1480px以上で改行 */
+  .br-1480-more {
+    display: none;
+    @media screen and (min-width: 1480px) {
+      display: block;
+    }
+  }
+
+  /* 1920px以上で改行 */
+  .br-1920-more {
+    display: none;
+    @media screen and (min-width: 1920px) {
+      display: block;
     }
   }
 } @else {
@@ -80,6 +121,70 @@ $mediaquerys: (
     display: none;
     @include mq("md") {
       display: block;
+    }
+  }
+
+  /* 414px以下で改行（414未満を表示する想定に合わせ、414px以上は非表示） */
+  .br-414-less {
+    display: none; // PCサイズ（414px以上）のデフォルト
+    @media screen and (max-width: 413px) {
+      display: block;
+    }
+  }
+
+  /* 500px以下で改行 */
+  .br-500-less {
+    display: none;
+    @media screen and (max-width: 499px) {
+      display: block;
+    }
+  }
+
+  /* 768px以下で改行 */
+  .br-768-less {
+    display: none;
+    @media screen and (max-width: 767px) {
+      display: block;
+    }
+  }
+
+  /* 768px以上で改行 */
+  .br-768-more {
+    display: block; // PCサイズ（768px以上）のデフォルト
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  /* 1000px以下で改行 */
+  .br-1000-less {
+    display: none;
+    @media screen and (max-width: 999px) {
+      display: block;
+    }
+  }
+
+  /* 1000px以上で改行 */
+  .br-1000-more {
+    display: block;
+    @media screen and (max-width: 999px) {
+      display: none;
+    }
+  }
+
+  /* 1480px以上で改行 */
+  .br-1480-more {
+    display: block;
+    @media screen and (max-width: 1479px) {
+      display: none;
+    }
+  }
+
+  /* 1920px以上で改行 */
+  .br-1920-more {
+    display: block;
+    @media screen and (max-width: 1919px) {
+      display: none;
     }
   }
 }

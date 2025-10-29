@@ -1,41 +1,411 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <meta name="format-detection" content="telephone=no" />
-  <meta name="robots" content="noindex" />
-  <!-- meta情報 -->
-  <title>CodeUps</title>
-  <meta name="description" content="" />
-  <meta name="keywords" content="" />
-  <!-- ogp -->
-  <meta property="og:title" content="" />
-  <meta property="og:type" content="" />
-  <meta property="og:url" content="" />
-  <meta property="og:image" content="" />
-  <meta property="og:site_name" content="" />
-  <meta property="og:description" content="" />
-  <!-- ファビコン -->
-  <link rel="”icon”" href="" />
-  <!-- css -->
-  <link rel="stylesheet" href="./assets/css/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="育栄建設株式会社の公式サイト。事業内容や採用情報などを紹介しています。">
+  <meta name="format-detection" content="telephone=no">
+  <title>育栄建設株式会社｜採用情報</title>
+
+  <!-- favicon -->
+  <link rel="icon" href="./assets/images/common/favicon.ico" type="image/x-icon">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+  <link rel="stylesheet" href="./assets/css/recruit.css">
+
+  <!-- Swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+
+  <!-- ScrollHint -->
+  <link rel="stylesheet" href="https://unpkg.com/scroll-hint@latest/css/scroll-hint.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- OGP -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="育栄建設株式会社｜採用情報">
+  <meta property="og:description" content="あなたの“芽”を育てる会社。育栄建設株式会社の採用情報ページ。">
+  <meta property="og:image" content="./assets/images/common/ogp.jpg">
+  <meta property="og:site_name" content="育栄建設株式会社">
+
   <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script defer src="./assets/js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/scroll-hint@latest/js/scroll-hint.min.js"></script>
+  <script src="./assets/js/script.js" defer></script>
 </head>
+
 <body>
-  <header>
+  <header class="header js-header">
+    <div class="header__inner inner">
 
-  </header>
-  <main>
-    <div class="inner">
-      <p class="test">変更のテスト</p>
+      <h1 class="header__logo">
+        <a href="./" class="header__logoLink">
+          <img src="./assets/images/top/logo.svg" alt="育栄建設株式会社" loading="lazy" decoding="async">
+        </a>
+      </h1>
+
+      <div class="header__drawer hamburger js-hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+
+      <!-- PCナビ -->
+      <nav class="header__pc-nav pc-nav" aria-label="グローバルナビゲーション">
+        <ul class="pc-nav__items">
+          <li class="pc-nav__item"><a class="pc-nav__link" href="./">HOME<span class="pc-nav__link-divider">／</span></a>
+          </li>
+
+          <li class="pc-nav__item">
+            <p class="pc-nav__link">会社案内<i class="fa-solid fa-chevron-down"></i><span
+                class="pc-nav__link-divider">／</span></p>
+            <ul class="pc-nav__feature-items">
+              <li class="pc-nav__feature-item"><a href="./greeting.html">代表挨拶</a></li>
+              <li class="pc-nav__feature-item"><a href="./policy.html">経営理念</a></li>
+              <li class="pc-nav__feature-item"><a href="./company.html">会社概要</a></li>
+              <li class="pc-nav__feature-item"><a href="./sports.html">スポーツサポート</a></li>
+              <li class="pc-nav__feature-item"><a href="./staff.html">社員紹介</a></li>
+              <li class="pc-nav__feature-item"><a href="./partners.html">協力会社</a></li>
+              <li class="pc-nav__feature-item"><a href="./access.html">アクセス</a></li>
+              <li class="pc-nav__feature-item"><a href="./privacy.html">個人情報の取り扱い</a></li>
+            </ul>
+          </li>
+
+          <li class="pc-nav__item">
+            <p class="pc-nav__link">事業内容<i class="fa-solid fa-chevron-down"></i><span
+                class="pc-nav__link-divider">／</span></p>
+            <ul class="pc-nav__feature-items">
+              <li class="pc-nav__feature-item"><a href="./service-public.html">公共事業</a></li>
+              <li class="pc-nav__feature-item"><a href="./service-private.html">民間事業</a></li>
+              <li class="pc-nav__feature-item"><a href="./service-partners.html">協力業者として</a></li>
+            </ul>
+          </li>
+
+          <li class="pc-nav__item">
+            <a class="pc-nav__link" href="./works.html">実績紹介<i class="fa-solid fa-chevron-down"></i><span
+                class="pc-nav__link-divider">／</span></a>
+            <ul class="pc-nav__feature-items">
+              <li class="pc-nav__feature-item"><a href="./works-seko.html">施工実績</a></li>
+              <li class="pc-nav__feature-item"><a href="./works-public.html">公共工事</a></li>
+              <li class="pc-nav__feature-item"><a href="./works-private.html">民間工事</a></li>
+            </ul>
+          </li>
+
+          <li class="pc-nav__item">
+            <a class="pc-nav__link" href="./topics.html">TOPICS<i class="fa-solid fa-chevron-down"></i><span
+                class="pc-nav__link-divider">／</span></a>
+            <ul class="pc-nav__feature-items">
+              <li class="pc-nav__feature-item"><a href="./topics-films.html">IKUEI FILMS</a></li>
+              <li class="pc-nav__feature-item"><a href="./topics-shokuba.html">職場環境向上活動</a></li>
+              <li class="pc-nav__feature-item"><a href="./topics-internship.html">インターンシップ</a></li>
+              <li class="pc-nav__feature-item"><a href="./topics-saiyo.html">採用関連情報</a></li>
+            </ul>
+          </li>
+
+          <li class="pc-nav__item">
+            <a class="pc-nav__link" href="./blog.html">BLOG<i class="fa-solid fa-chevron-down"></i><span
+                class="pc-nav__link-divider">／</span></a>
+            <ul class="pc-nav__feature-items">
+              <li class="pc-nav__feature-item"><a href="./blog-president.html">代表ブログ</a></li>
+              <li class="pc-nav__feature-item"><a href="./blog-staff.html">スタッフブログ</a></li>
+            </ul>
+          </li>
+
+          <li class="pc-nav__item">
+            <a class="pc-nav__link" href="./adoption.html">採用情報<i class="fa-solid fa-chevron-down"></i><span
+                class="pc-nav__link-divider">／</span></a>
+            <ul class="pc-nav__feature-items">
+              <li class="pc-nav__feature-item"><a href="./adoption-attract.html">育栄建設の魅力</a></li>
+              <li class="pc-nav__feature-item"><a href="./adoption-message.html">社長メッセージ</a></li>
+              <li class="pc-nav__feature-item"><a href="./adoption-interview.html">社員メッセージ</a></li>
+              <li class="pc-nav__feature-item"><a href="./adoption-partners.html">協力会社メッセージ</a></li>
+              <li class="pc-nav__feature-item"><a href="./adoption-works.html">育栄建設の仕事</a></li>
+              <li class="pc-nav__feature-item"><a href="./adoption-training.html">キャリアアップ</a></li>
+              <li class="pc-nav__feature-item"><a href="./adoption-requirements.html">募集要項</a></li>
+              <li class="pc-nav__feature-item"><a href="https://www.gakujo.ne.jp/2024/company/baseinfo/34449/"
+                  target="_blank" rel="noopener noreferrer">エントリー</a></li>
+            </ul>
+          </li>
+
+          <li class="pc-nav__item">
+            <a class="pc-nav__link" href="./contact.html">お問い合わせ</a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- SPナビ -->
+      <nav class="header__sp-nav sp-nav js-sp-nav">
+        <a class="sp-nav__logo" href="./">
+          <img src="./assets/images/top/footer-logo.svg" alt="育栄建設株式会社" loading="lazy" decoding="async">
+        </a>
+        <ul class="sp-nav__items">
+          <li class="sp-nav__item">
+            <p class="sp-nav__title">会社案内</p><span class="js-sp-accordion"></span>
+            <ul class="sp-nav__sub-items">
+              <li><a href="./greeting.html">代表挨拶</a></li>
+              <li><a href="./policy.html">経営理念</a></li>
+              <li><a href="./company.html">会社概要</a></li>
+              <li><a href="./sports.html">スポーツサポート</a></li>
+              <li><a href="./staff.html">社員紹介</a></li>
+              <li><a href="./partners.html">協力会社</a></li>
+              <li><a href="./access.html">アクセス</a></li>
+              <li><a href="./privacy.html">個人情報の取り扱い</a></li>
+            </ul>
+          </li>
+
+          <li class="sp-nav__item">
+            <a href="./service.html" class="sp-nav__title">事業内容</a><span class="js-sp-accordion"></span>
+            <ul class="sp-nav__sub-items">
+              <li><a href="./service-public.html">公共事業</a></li>
+              <li><a href="./service-private.html">民間事業</a></li>
+              <li><a href="./service-partners.html">協力業者として</a></li>
+            </ul>
+          </li>
+
+          <li class="sp-nav__item">
+            <a class="sp-nav__title" href="./works.html">実績紹介</a><span class="js-sp-accordion"></span>
+            <ul class="sp-nav__sub-items">
+              <li><a href="./works-seko.html">施工実績</a></li>
+              <li><a href="./works-public.html">公共工事</a></li>
+              <li><a href="./works-private.html">民間工事</a></li>
+            </ul>
+          </li>
+
+          <li class="sp-nav__item">
+            <a class="sp-nav__title" href="./topics.html">TOPICS</a><span class="js-sp-accordion"></span>
+            <ul class="sp-nav__sub-items">
+              <li><a href="./topics-films.html">IKUEI FILMS</a></li>
+              <li><a href="./topics-shokuba.html">職場環境向上活動</a></li>
+              <li><a href="./topics-internship.html">インターンシップ</a></li>
+              <li><a href="./topics-saiyo.html">採用関連情報</a></li>
+            </ul>
+          </li>
+
+          <li class="sp-nav__item">
+            <a class="sp-nav__title" href="./blog.html">BLOG</a><span class="js-sp-accordion"></span>
+            <ul class="sp-nav__sub-items">
+              <li><a href="./blog-president.html">代表ブログ</a></li>
+              <li><a href="./blog-staff.html">スタッフブログ</a></li>
+            </ul>
+          </li>
+
+          <li class="sp-nav__item">
+            <a class="sp-nav__title" href="./adoption.html">採用情報</a><span class="js-sp-accordion"></span>
+            <ul class="sp-nav__sub-items">
+              <li><a href="./adoption-attract.html">育栄建設の魅力</a></li>
+              <li><a href="./adoption-message.html">社長メッセージ</a></li>
+              <li><a href="./adoption-interview.html">社員メッセージ</a></li>
+              <li><a href="./adoption-partners.html">協力会社メッセージ</a></li>
+              <li><a href="./adoption-works.html">育栄建設の仕事</a></li>
+              <li><a href="./adoption-training.html">キャリアアップ</a></li>
+              <li><a href="./adoption-requirements.html">募集要項</a></li>
+              <li><a href="https://www.gakujo.ne.jp/2024/company/baseinfo/34449/" target="_blank"
+                  rel="noopener noreferrer">エントリー</a></li>
+            </ul>
+          </li>
+
+          <li class="sp-nav__item sp-nav__title--contact">
+            <a class="sp-nav__title" href="./contact.html">お問い合わせ</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-  </main>
-  <footer>
+  </header>
 
+  <main class="adoption-main">
+    <section class="adoption-fv">
+      <div class="adoption-fv__inner">
+        <figure class="adoption-fv__image">
+          <img src="./assets/images/adoption/fv-pc.webp" alt="育栄建設 採用情報ファーストビュー" loading="lazy" decoding="async">
+        </figure>
+        <h2 class="adoption-fv__title">
+          <img src="./assets/images/adoption/title.svg" alt="HAeru あなたの芽を育てる会社" loading="lazy" decoding="async">
+        </h2>
+      </div>
+      <!-- パンくず -->
+      <div class="adoption-fv__breadcrumb breadcrumb" typeof="BreadcrumbList" vocab="https://schema.org/">
+        <a href="./" property="item" typeof="WebPage">
+          <span property="name">HOME</span>
+        </a>
+        <span> ＞ </span>
+        <span property="name">採用情報</span>
+      </div>
+    </section>
+
+    <section class="adoption-cards">
+      <div class="adoption-cards__inner inner">
+
+        <!-- 社長メッセージカード -->
+        <article class="adoption-card adoption-card--wide">
+          <div class="adoption-card__content">
+            <h3 class="adoption-card__title">
+              私たちは「人の役に立ちたい」という想いを<br>
+              持つ方と一緒に働きたいと考えています。
+            </h3>
+            <p class="adoption-card__text">
+              育栄建設は1963年に設立した東京都台東区を拠点とする総合建設会社です。<br>
+              私たちが主に携わっているのは公共工事、個人住宅、店舗工事など。<br>
+              学校や保育園、消火栓、舗装道路など、人々が生活する基盤を整備しています。<br>
+              まちに暮らす皆さんの安全に、私たちも誇りと喜びを持って取り組んでいます。
+            </p>
+            <p class="adoption-card__name">
+              育栄建設株式会社 代表取締役<br>
+              <span class="adoption-card__name--strong">水落 清</span>
+            </p>
+            <div class="btn adoption-card__btn">
+              <a href="./adoption-message.html">社長メッセージを見る</a>
+            </div>
+          </div>
+          <figure class="adoption-card__image">
+            <img src="./assets/images/adoption/message-pc.webp" alt="代表取締役 水落 清" loading="lazy" decoding="async">
+          </figure>
+        </article>
+
+        <article class="adoption-card">
+          <a href="./adoption/point/" class="adoption-card__link">
+            <div class="adoption-card__body">
+              <h3 class="adoption-card__title section-title">
+                <span class="section-title--ja">育栄建設の魅力</span>
+                <span class="section-title--en">Appeal&ensp;of&ensp;Ikuei&ensp;Kensetsu</span>
+              </h3>
+              <p class="adoption-card__text">年齢や役職の垣根なく、ベテランも若手も意見交換ができる風通しの良い環境で、活気があり、明るい社風が特長です。</p>
+            </div>
+            <figure class="adoption-card__image">
+              <img src="./assets/images/adoption/point-pc.webp" alt="育栄建設の魅力を紹介する写真" loading="lazy" decoding="async">
+            </figure>
+          </a>
+        </article>
+
+
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer class="footer l-footer">
+    <div class="footer__inner inner">
+
+      <!-- Facebookページプラグイン -->
+      <div class="footer__fb">
+        <div class="fb-page" data-href="https://www.facebook.com/ikueikensetsu/" data-width="500" data-height="130"
+          data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true">
+          <blockquote cite="https://www.facebook.com/ikueikensetsu/" class="fb-xfbml-parse-ignore">
+            <a href="https://www.facebook.com/ikueikensetsu/">育栄建設株式会社</a>
+          </blockquote>
+        </div>
+      </div>
+
+      <!-- フッターナビ -->
+      <nav class="footer__nav">
+        <ul class="footer-nav__items">
+          <div class="footer__nav-wrap">
+            <li class="footer-nav__item">
+              <span>会社案内</span>
+              <ul class="footer-nav__sub-items">
+                <li><a href="./greeting.html">代表挨拶</a></li>
+                <li><a href="./policy.html">経営理念</a></li>
+                <li><a href="./company.html">会社概要</a></li>
+                <li><a href="./sports.html">スポーツサポート</a></li>
+                <li><a href="./staff.html">社員紹介</a></li>
+                <li><a href="./partners.html">協力会社</a></li>
+                <li><a href="./access.html">アクセス</a></li>
+                <li><a href="./privacy.html">個人情報の取り扱い</a></li>
+              </ul>
+            </li>
+
+            <li class="footer-nav__item">
+              <a href="./service.html">事業内容</a>
+              <ul class="footer-nav__sub-items">
+                <li><a href="./service-public.html">公共事業</a></li>
+                <li><a href="./service-private.html">民間事業</a></li>
+                <li><a href="./service-partners.html">協力業者として</a></li>
+              </ul>
+            </li>
+
+            <li class="footer-nav__item">
+              <a href="./works.html">実績紹介</a>
+              <ul class="footer-nav__sub-items">
+                <li><a href="./works-seko.html">施工実績</a></li>
+                <li><a href="./works-public.html">公共工事</a></li>
+                <li><a href="./works-private.html">民間工事</a></li>
+              </ul>
+            </li>
+          </div>
+
+          <div class="footer__nav-wrap">
+            <li class="footer-nav__item">
+              <a href="./topics.html">TOPICS</a>
+              <ul class="footer-nav__sub-items">
+                <li><a href="./topics-films.html">IKUEI FILMS</a></li>
+                <li><a href="./topics-shokuba.html">職場環境向上活動</a></li>
+                <li><a href="./topics-internship.html">インターンシップ</a></li>
+                <li><a href="./topics-saiyo.html">採用関連情報</a></li>
+              </ul>
+            </li>
+
+            <li class="footer-nav__item">
+              <a href="./blog.html">BLOG</a>
+              <ul class="footer-nav__sub-items">
+                <li><a href="./blog-president.html">代表ブログ</a></li>
+                <li><a href="./blog-staff.html">スタッフブログ</a></li>
+              </ul>
+            </li>
+
+            <li class="footer-nav__item">
+              <a href="./adoption.html">採用情報</a>
+              <ul class="footer-nav__sub-items">
+                <li><a href="./adoption-attract.html">育栄建設の魅力</a></li>
+                <li><a href="./adoption-message.html">社長メッセージ</a></li>
+                <li><a href="./adoption-interview.html">社員メッセージ</a></li>
+                <li><a href="./adoption-partners.html">協力会社メッセージ</a></li>
+                <li><a href="./adoption-works.html">育栄建設の仕事</a></li>
+                <li><a href="./adoption-training.html">キャリアアップ</a></li>
+                <li><a href="./adoption-requirements.html">募集要項</a></li>
+                <li><a href="https://www.gakujo.ne.jp/2024/company/baseinfo/34449/" target="_blank"
+                    rel="noopener noreferrer">エントリー</a></li>
+              </ul>
+            </li>
+          </div>
+
+        </ul>
+      </nav>
+    </div>
+
+    <!-- フッターボトム -->
+    <div class="footer__bottom">
+      <div class="footer__bottom-inner inner">
+        <div class="footer__bottom-links">
+          <a href="./" class="footer__bottom-link">ホーム</a>
+          <a href="./contact.html" class="footer__bottom-link">お問い合わせ</a>
+        </div>
+
+        <div class="footer__bottom-info">
+          <div class="footer__bottom-img">
+            <img src="./assets/images/top/footer-logo.svg" alt="育栄建設株式会社" loading="lazy" decoding="async">
+          </div>
+          <div class="footer__bottom-company">
+            <p class="footer__bottom-name">育栄建設株式会社</p>
+            <p>〒111-0032 東京都台東区浅草5-14-7　TEL.03(3874)6721　FAX.03(3874)3137</p>
+          </div>
+        </div>
+
+        <small class="footer__copy">Copyright © IKUEI CORPORATION Inc. All Rights Reserved.</small>
+      </div>
+    </div>
   </footer>
+
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous"
+    src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v13.0"></script>
+
 </body>
 
 </html>

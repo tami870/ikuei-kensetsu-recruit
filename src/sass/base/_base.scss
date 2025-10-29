@@ -40,3 +40,32 @@
     }
   }
 }
+
+/* PC版Chromeで拡縮画像ぼやけ対策 */
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (min-resolution: 0.001dpcm) {
+  img {
+    image-rendering: -webkit-optimize-contrast;
+  }
+}
+
+/* iPhoneSafariで画像ジャギ対策 */
+img {
+  image-rendering: auto;
+}
+
+/* コンテンツ量が少なく短いページでもフッターを最下部に表示する ---- */
+.content-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+/* コンテンツ量が少なく短いページでもフッターを最下部に表示する ここまで ---- */
+
+/* YouTubeのframeborder属性の変わり(HTML5の標準仕様で廃止されているため) */
+iframe {
+  border: none;
+}

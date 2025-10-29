@@ -1,0 +1,163 @@
+@use "global" as *;
+
+.fv {
+  width: 100%;
+  overflow: hidden;
+  margin-top: rem(68);
+  position: relative;
+
+  @include mq("md") {
+    margin-top: rem(60);
+  }
+}
+
+.fv__swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.fv__swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+.fv__swiper-slide {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.fv__swiper-slide::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: $white;
+  opacity: 0.22;
+  z-index: 1;
+}
+
+.fv__inner {
+  width: 100%;
+  height: inherit;
+  position: relative;
+}
+
+.fv__slide-img {
+  position: relative;
+  aspect-ratio: 1300/647;
+  width: 100%;
+  height: 100%;
+  @include mq("md") {
+    aspect-ratio: 375/607;
+  }
+}
+
+.fv__slide-img img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  @include mq("md") {
+    object-position: center center;
+  }
+}
+
+.fv__copy {
+  position: absolute;
+  top: 13%;
+  left: 16%;
+  z-index: 2;
+  @include mq("md") {
+    top: 22%;
+    left: 5%;
+    right: 5%;
+  }
+}
+
+.fv__main-copy {
+  width: rem(350);
+  @include mq("md") {
+    width: rem(240);
+  }
+}
+
+.fv__sub-copy {
+  width: rem(609);
+  margin-top: rem(28);
+  @include mq("md") {
+    width: 100%;
+    margin-top: rem(20);
+  }
+}
+
+.swiper-pagination.fv__swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal
+  .swiper-pagination-bullet {
+  width: rem(9);
+  height: rem(9);
+  background: #a6a6a6;
+}
+
+.swiper-pagination.fv__swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: rem(28);
+}
+
+.swiper-pagination.fv__swiper-pagination.swiper-pagination-bullets.swiper-pagination-horizontal
+  .swiper-pagination-bullet-active {
+  background: $white;
+}
+
+.swiper-button-next.fv__swiper-button-next,
+.swiper-button-prev.fv__swiper-button-prev {
+  top: auto;
+  bottom: rem(28);
+}
+
+.swiper-button-next.fv__swiper-button-next {
+  right: calc(50% - rem(100));
+}
+
+.swiper-button-prev.fv__swiper-button-prev {
+  left: calc(50% - rem(100));
+}
+
+.swiper-button-next.fv__swiper-button-next::after,
+.swiper-button-prev.fv__swiper-button-prev::after {
+  content: "\f053";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: $white;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: rem(20);
+}
+
+.swiper-button-next.fv__swiper-button-next::after {
+  transform: rotate(180deg);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: rem(12.5);
+  height: rem(20);
+}
+
+// .swiper-pagination.fv__swiper-pagination,
+// .swiper-button-prev.fv__swiper-button-prev,
+// .swiper-button-next.fv__swiper-button-next {
+//   box-shadow: 0px 0px 4px rgba(124, 122, 121, 0.8), 0px 0px 15px rgba(124, 122, 121, 0.8);
+// }
+
+.swiper-button-next.fv__swiper-button-next::after,
+.swiper-button-prev.fv__swiper-button-prev::after,
+.swiper-pagination.fv__swiper-pagination .swiper-pagination-bullet::after {
+  text-shadow: 0px 0px 4px rgba(124, 122, 121, 0.9),
+    0px 0px 15px rgba(124, 122, 121, 0.9);
+}

@@ -1,0 +1,181 @@
+@use "global" as *;
+
+.sp-nav {
+  display: none;
+  @include mq("md") {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100svh;
+    transition: all 0.3s;
+    transform: translate(100%);
+    background-color: $green;
+    overflow-y: auto;
+    padding-bottom: rem(35);
+    padding-top: rem(10);
+
+    color: $white;
+  }
+}
+
+.sp-nav.is-active {
+  transform: translate(0);
+}
+
+.sp-nav__logo {
+  width: rem(140);
+  position: sticky;
+  top: rem(0);
+  left: rem(20);
+  display: block;
+}
+
+.sp-nav__items {
+  @include mq("md") {
+    font-size: rem(14);
+    margin-top: rem(16);
+    font-weight: $medium;
+    line-height: calc(38 / 16);
+  }
+}
+.sp-nav__item a {
+  position: relative;
+  transition: color 0.3s;
+}
+
+.sp-nav__item a[target="_blank"] {
+  position: relative;
+  padding-right: rem(20);
+
+  &::before {
+    mask-image: url(../images/top/arrow-link.svg);
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    background-color: $white;
+    content: "";
+    display: block;
+    position: absolute;
+    width: rem(12);
+    height: auto;
+    aspect-ratio: 1;
+    right: rem(0);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.sp-nav__item a:hover {
+  color: $green;
+}
+
+.sp-nav__sub-items {
+  display: none;
+  padding-left: rem(20);
+  padding-bottom: rem(10);
+}
+
+.sp-nav__sub-items li a {
+  position: relative;
+  padding-left: rem(10);
+  transition: color 0.3s;
+  @include mq("md") {
+    padding-left: rem(15);
+  }
+}
+
+.sp-nav__sub-items li a:hover {
+  color: $green;
+}
+
+.sp-nav__sub-items li a::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: rem(8);
+  height: 1px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: $white;
+  transition: background-color 0.3s;
+  @include mq("md") {
+    width: rem(6);
+  }
+}
+
+.sp-nav__sub-items li a:hover::after {
+  background-color: $green;
+}
+
+.sp-nav__title {
+  font-size: rem(18);
+  font-weight: $medium;
+  position: relative;
+  display: block;
+  padding-top: rem(10);
+  padding-bottom: rem(10);
+  padding-left: rem(20);
+}
+
+.sp-nav__title--contact::after {
+  color: #fff;
+  display: block;
+  content: "\f053";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  position: absolute;
+  right: rem(20);
+  top: 50%;
+  transform: translateY(-50%) rotate(180deg);
+  transition: color 0.3s;
+}
+
+.sp-nav__item {
+  border-top: 1px solid $white;
+  font-size: rem(16);
+  font-weight: $medium;
+  padding-right: rem(70);
+  position: relative;
+}
+
+.sp-nav__item:last-child {
+  border-bottom: 1px solid $white;
+}
+
+.js-sp-accordion {
+  position: absolute;
+  top: rem(30);
+  right: rem(20);
+  width: rem(15);
+  height: rem(15);
+}
+
+.js-sp-accordion::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: rem(15);
+  height: rem(2);
+  right: 0;
+  top: 0;
+  background-color: #fff;
+}
+
+.js-sp-accordion::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: rem(15);
+  height: rem(2);
+  right: 0;
+  top: 0;
+  transform: rotate(90deg);
+  background-color: #fff;
+  transition: transform 0.3s;
+}
+
+.js-sp-accordion.is-active::after {
+  transform: rotate(180deg);
+}

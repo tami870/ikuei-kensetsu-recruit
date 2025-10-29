@@ -1,0 +1,110 @@
+@use "global" as *;
+
+.pc-nav {
+  @media screen and (max-width: 1224px) {
+    zoom: 0.92;
+  }
+}
+
+.pc-nav__items {
+  display: flex;
+  height: inherit;
+  align-items: center;
+  gap: rem(12);
+  flex: 1;
+}
+
+.pc-nav__item {
+  text-align: center;
+  font-family: "Noto Sans JP";
+  font-weight: $bold;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.pc-nav__item a,
+.pc-nav__item p {
+  display: flex;
+  height: inherit;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  position: relative;
+  cursor: pointer;
+  font-size: rem(16);
+  line-height: calc(19 / 16);
+  letter-spacing: 0.05em;
+}
+
+.pc-nav__feature-item a[target="_blank"] {
+  position: relative;
+
+  &::before {
+    background-image: url(../images/top/arrow-link.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    display: block;
+    position: absolute;
+    width: rem(15);
+    height: auto;
+    aspect-ratio: 1;
+    right: rem(46);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+.pc-nav__link {
+  transition: color 0.3s;
+}
+
+.pc-nav__link i {
+  margin-left: rem(4);
+  font-size: rem(10);
+}
+
+.pc-nav__link:hover {
+  color: $green;
+}
+
+.pc-nav__feature-items {
+  visibility: hidden; /*デフォルトでは非表示の状態にしておく*/
+  opacity: 0; /*不透明度0*/
+  transition: all 0.3s; /*表示の変化を0.3秒に指定*/
+  position: absolute;
+  top: rem(68);
+  left: 40%;
+  transform: translateX(-50%);
+  background-color: $bg-green;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.pc-nav__feature-item a {
+  padding-top: rem(10);
+  padding-bottom: rem(10);
+  font-size: rem(15);
+  width: rem(220);
+  display: block;
+  transition: all 0.3s;
+}
+
+.pc-nav__feature-item a:hover {
+  color: $green;
+}
+
+.pc-nav__item:hover .pc-nav__feature-items {
+  visibility: visible; /*Gナビメニューにホバーしたら表示*/
+  opacity: 1; /*不透明度1*/
+}
+
+.pc-nav__link-divider {
+  color: #a19f9f;
+  margin-left: rem(5);
+}
