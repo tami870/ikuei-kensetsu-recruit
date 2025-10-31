@@ -46,7 +46,7 @@
 
 <body>
   <header class="header js-header">
-    <div class="header__inner inner">
+    <div class="header__inner">
 
       <h1 class="header__logo">
         <a href="./" class="header__logoLink">
@@ -245,7 +245,7 @@
     <section class="adoption-cards">
       <div class="adoption-cards__inner inner">
 
-        <!-- 社長メッセージカード -->
+        <!-- ワイドカード（社長メッセージ） -->
         <article class="adoption-card adoption-card--wide">
           <div class="adoption-card__content">
             <h3 class="adoption-card__title">
@@ -267,6 +267,7 @@
             <img src="./assets/images/adoption/message-pc.webp" alt="代表取締役 水落 清" loading="lazy" decoding="async">
           </figure>
         </article>
+        <!-- ワイドカード（社長メッセージ）ここまで -->
 
         <!-- 汎用カード -->
         <article class="adoption-card">
@@ -284,11 +285,257 @@
             </figure>
           </a>
         </article>
-
-
+        <!-- 汎用カードここまで -->
+        <article class="adoption-card">
+          <a href="./adoption/point/" class="adoption-card__link">
+            <div class="adoption-card__body">
+              <div class="adoption-card__title section-title">
+                <h3 class="section-title__ja">社員メッセージ</h3>
+                <span class="section-title__en">Messages&ensp;from&ensp;Our&ensp;Team</span>
+              </div>
+              <p class="adoption-card__text">育栄建設で働く社員たちが、仕事の魅力や日々のやりがい、仕事への想いなどをお伝えします。</p>
+            </div>
+            <figure class="adoption-card__image">
+              <img src="./assets/images/adoption/interview-pc.webp" alt="会社の前でスタッフたちが笑顔で集合写真に収まる様子。チームの一体感が伝わる。"
+                loading="lazy" decoding="async">
+            </figure>
+          </a>
+        </article>
+        <article class="adoption-card">
+          <a href="./adoption/point/" class="adoption-card__link">
+            <div class="adoption-card__body">
+              <div class="adoption-card__title section-title">
+                <h3 class="section-title__ja">協力会社メッセージ</h3>
+                <span class="section-title__en">Messages&ensp;from&ensp;Our&ensp;Partners</span>
+              </div>
+              <p class="adoption-card__text">育栄建設を支える協力会社の皆様から寄せられた温かいメッセージと、その想いを丁寧にお届けします。</p>
+            </div>
+            <figure class="adoption-card__image">
+              <img src="./assets/images/adoption/message-partners-pc.webp" alt="晴れた空の下、都市の建設現場でビジネススーツの二人が現場確認を行う様子。"
+                loading="lazy" decoding="async">
+            </figure>
+          </a>
+        </article>
+        <article class="adoption-card">
+          <a href="./adoption/point/" class="adoption-card__link">
+            <div class="adoption-card__body">
+              <div class="adoption-card__title section-title">
+                <h3 class="section-title__ja">育栄建設の仕事</h3>
+                <span class="section-title__en">Our&ensp;Work</span>
+              </div>
+              <p class="adoption-card__text">豊富な経験と確かな技術で、建築・土木工事を通じて社会や地域の発展を支えています。</p>
+            </div>
+            <figure class="adoption-card__image">
+              <img src="./assets/images/adoption/our-works-pc.webp" alt="現場の照明や工具が並ぶ中、女性スタッフが真剣な表情で作業準備を進めているシーン。"
+                loading="lazy" decoding="async">
+            </figure>
+          </a>
+        </article>
+        <article class="adoption-card">
+          <a href="./adoption/point/" class="adoption-card__link">
+            <div class="adoption-card__body">
+              <div class="adoption-card__title section-title">
+                <h3 class="section-title__ja">キャリアアップ</h3>
+                <span class="section-title__en">Career&ensp;Growth</span>
+              </div>
+              <p class="adoption-card__text">当社は人材育成に力を注いでいます。特に資格取得に向けたサポートに関しては時間と労力を惜しみません。</p>
+            </div>
+            <figure class="adoption-card__image">
+              <img src="./assets/images/adoption/training-pc.webp" alt="作業服を着た男性がホワイトボードにマーカーで予定を書き込んでいる様子。"
+                loading="lazy" decoding="async">
+            </figure>
+          </a>
+        </article>
+        <article class="adoption-card">
+          <a href="./adoption/point/" class="adoption-card__link">
+            <div class="adoption-card__body">
+              <div class="adoption-card__title section-title">
+                <h3 class="section-title__ja">募集要項</h3>
+                <span class="section-title__en">Application&ensp;Guidelines</span>
+              </div>
+              <p class="adoption-card__text">育栄建設の募集要項をご案内します。応募条件や待遇、勤務内容など詳しくご確認ください。</p>
+            </div>
+            <figure class="adoption-card__image">
+              <img src="./assets/images/adoption/requirements-pc.webp" alt="オフィスのデスク上に置かれた履歴書とパソコン。就職活動や採用シーンを連想させる構図。"
+                loading="lazy" decoding="async">
+            </figure>
+          </a>
+        </article>
       </div>
     </section>
 
+    <section class="adoption-works">
+      <div class="adoption-works__inner inner">
+        <div class="adoption-works__section-title section-title">
+          <h2 class="section-title__ja u-font38">最近の実績</h2>
+          <p class="section-title__en u-font16">works</p>
+        </div>
+
+        <!-- スワイパー -->
+        <div class="adoption-works__items cards">
+          <div class="works-button-prev card-button-prev"></div>
+          <div class="works-button-next card-button-next"></div>
+
+          <div class="swiper swiper-container js-works-swiper adoption-works__swiper">
+            <div class="swiper-wrapper">
+
+              <!-- ループここから -->
+              <div class="swiper-slide card">
+                <a href="./works/post-01.html" class="card__link">
+                  <div class="card__wrapper">
+                    <div class="card__tag-wrapper">
+                      <p class="card__tag">公共工事</p>
+                    </div>
+                    <figure class="card__img">
+                      <img src="./assets/images/top/noimage.jpg" alt="樹木伐採清祓の様子" loading="lazy" decoding="async">
+                    </figure>
+                    <div class="card__content">
+                      <p class="card__date">2025年1月7日</p>
+                      <h3 class="card__title">樹木伐採清祓をしていただきました</h3>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <!-- ループここまで -->
+
+              <div class="swiper-slide card">
+                <a href="./works/post-02.html" class="card__link">
+                  <div class="card__wrapper">
+                    <div class="card__tag-wrapper">
+                      <p class="card__tag">公共工事</p>
+                    </div>
+                    <figure class="card__img">
+                      <img src="./assets/images/top/noimage.jpg" alt="東京都港湾局からの表彰状" loading="lazy" decoding="async">
+                    </figure>
+                    <div class="card__content">
+                      <p class="card__date">2025年1月7日</p>
+                      <h3 class="card__title">東京都港湾局から表彰されました！</h3>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="swiper-slide card">
+                <a href="./works/post-03.html" class="card__link">
+                  <div class="card__wrapper">
+                    <div class="card__tag-wrapper">
+                      <p class="card__tag">民間工事</p>
+                    </div>
+                    <figure class="card__img">
+                      <img src="./assets/images/top/noimage.jpg" alt="一軒家の万年塀を中央に取った写真" loading="lazy" decoding="async">
+                    </figure>
+                    <div class="card__content">
+                      <p class="card__date">2025年1月7日</p>
+                      <h3 class="card__title">万年塀をコンクリートブロック＋アルミフェンスに変更します⑧</h3>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="swiper-slide card">
+                <a href="./works/post-04.html" class="card__link">
+                  <div class="card__wrapper">
+                    <div class="card__tag-wrapper">
+                      <p class="card__tag">公共工事</p>
+                    </div>
+                    <figure class="card__img">
+                      <img src="./assets/images/top/noimage.jpg" alt="ある一角の白いコンクリートブロックが載った写真" loading="lazy"
+                        decoding="async">
+                    </figure>
+                    <div class="card__content">
+                      <p class="card__date">2025年1月7日</p>
+                      <h3 class="card__title">万年塀をコンクリートブロック＋アルミフェンスに変更します⑦</h3>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="swiper-slide card">
+                <a href="./works/post-04.html" class="card__link">
+                  <div class="card__wrapper">
+                    <div class="card__tag-wrapper">
+                      <p class="card__tag">公共工事</p>
+                    </div>
+                    <figure class="card__img">
+                      <img src="./assets/images/top/noimage.jpg" alt="ある一角の白いコンクリートブロックが載った写真" loading="lazy"
+                        decoding="async">
+                    </figure>
+                    <div class="card__content">
+                      <p class="card__date">2025年1月7日</p>
+                      <h3 class="card__title">万年塀をコンクリートブロック＋アルミフェンスに変更します⑦</h3>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="swiper-slide card">
+                <a href="./works/post-04.html" class="card__link">
+                  <div class="card__wrapper">
+                    <div class="card__tag-wrapper">
+                      <p class="card__tag">公共工事</p>
+                    </div>
+                    <figure class="card__img">
+                      <img src="./assets/images/top/noimage.jpg" alt="ある一角の白いコンクリートブロックが載った写真" loading="lazy"
+                        decoding="async">
+                    </figure>
+                    <div class="card__content">
+                      <p class="card__date">2025年1月7日</p>
+                      <h3 class="card__title">万年塀をコンクリートブロック＋アルミフェンスに変更します⑦</h3>
+                    </div>
+                  </div>
+                </a>
+              </div>
+
+              <div class="swiper-slide card">
+                <a href="./works/post-04.html" class="card__link">
+                  <div class="card__wrapper">
+                    <div class="card__tag-wrapper">
+                      <p class="card__tag">公共工事</p>
+                    </div>
+                    <figure class="card__img">
+                      <img src="./assets/images/top/noimage.jpg" alt="ある一角の白いコンクリートブロックが載った写真" loading="lazy"
+                        decoding="async">
+                    </figure>
+                    <div class="card__content">
+                      <p class="card__date">2025年1月7日</p>
+                      <h3 class="card__title">万年塀をコンクリートブロック＋アルミフェンスに変更します⑦</h3>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <div class="adoption-entry">
+      <div class="adoption-entry__inner">
+        <!-- ENTRYボタン -->
+        <div class="adoption-entry__block adoption-entry__block--left">
+          <a href="./entry/" class="adoption-entry__link" target="_blank" rel="noopener noreferrer">
+            entry
+            <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <!-- 連絡情報 -->
+        <div class="adoption-entry__block adoption-entry__block--right">
+          <div class="adoption-entry__content">
+            <p class="adoption-entry__text">ご興味をお持ちの方は下記までお問い合わせください。</p>
+            <p class="adoption-entry__tel">TEL.<a href="tel:0338746721">03-3874-6721</a></p>
+            <p class="adoption-entry__mail">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              <a href="mailto:ikuei@c-o.co.jp">1@ikuei-c.co.jp</a>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="adoption-entry__image">
+        <img src="./assets/images/adoption/entry-view-pc.webp" alt="">
+      </div>
+    </div>
 
   </main>
 

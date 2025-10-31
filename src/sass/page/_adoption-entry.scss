@@ -1,0 +1,117 @@
+@use "global" as *;
+
+.adoption-entry {
+  background-color: $bg-green;
+}
+
+.adoption-entry__inner {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+
+  @include mq("md") {
+    flex-direction: column;
+  }
+}
+
+.adoption-entry__block {
+  flex: 1;
+}
+
+.adoption-entry__block--left {
+  background-color: $green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  padding-top: rem(45);
+  padding-bottom: rem(45);
+}
+
+.adoption-entry__link {
+  display: inline-flex;
+  align-items: center;
+  font-family: $roboto-font;
+  font-size: rem(70);
+  font-weight: 900;
+  color: $white;
+  line-height: calc(162 / 70);
+  letter-spacing: 0.025em;
+  position: relative;
+  text-transform: uppercase;
+  transition: opacity 0.3s ease;
+
+  @include mq(md) {
+    font-size: rem(20);
+  }
+}
+
+.adoption-entry__link:hover {
+  opacity: 0.8;
+}
+
+.adoption-entry__link i {
+  position: absolute;
+  bottom: -15%;
+  right: -80%;
+  font-size: rem(20);
+  color: $white;
+  pointer-events: none;
+}
+
+/* 右側ブロック */
+.adoption-entry__block--right {
+  background-color: $bg-green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+
+  @include mq("md") {
+    padding: rem(24);
+  }
+}
+
+.adoption-entry__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.adoption-entry__text {
+  font-size: rem(16);
+  font-weight: $bold;
+  color: $black;
+}
+
+.adoption-entry__tel {
+  font-size: rem(47);
+  font-family: $roboto-font;
+  font-weight: 900;
+  color: $green;
+
+  @include mq(md) {
+    font-size: rem(20);
+  }
+}
+
+.adoption-entry__tel a {
+  color: $green;
+}
+
+.adoption-entry__mail {
+  display: flex;
+  align-items: center;
+  gap: rem(8);
+  font-size: rem(24);
+  color: $green;
+}
+
+.adoption-entry__mail i {
+  font-size: rem(20);
+}
+
+.adoption-entry__mail a {
+  color: $green;
+  text-decoration: none;
+}

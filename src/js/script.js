@@ -157,6 +157,27 @@ $(function () {
     );
   }
 
+  // works-swiperスライダー
   window.addEventListener("load", setHeaderHeightVar);
   window.addEventListener("resize", setHeaderHeightVar);
+});
+
+var swiperWorks = new Swiper(".js-works-swiper", {
+  loop: true,
+  loopAdditionalSlides: 10, // ループ時の複製枚数を増やして端で止まるのを防止
+  slidesPerGroup: 1, // 常に1枚ずつ移動
+  spaceBetween: 34,
+  centeredSlides: false,
+  navigation: {
+    nextEl: ".works-button-next",
+    prevEl: ".works-button-prev",
+  },
+  breakpoints: {
+    0: { slidesPerView: 1.2 },
+    768: { slidesPerView: 2.5 },
+    1201: { slidesPerView: 3.2 },
+    1600: { slidesPerView: 4.2 },
+  },
+  // 端での引っかかりをより確実に回避
+  speed: 400,
 });

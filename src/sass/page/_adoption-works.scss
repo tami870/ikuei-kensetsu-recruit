@@ -1,0 +1,202 @@
+@use "global" as *;
+
+.adoption-works {
+  background-color: $white;
+  padding-top: rem(50);
+  padding-bottom: rem(125);
+
+  @include mq("md") {
+    padding-top: rem(40);
+    padding-bottom: rem(60);
+  }
+}
+
+.adoption-works__section-title.section-title {
+  margin-left: 0;
+}
+
+.adoption-works__section-title .section-title__ja,
+.adoption-works__section-title .section-title__en {
+  text-align-last: left;
+}
+
+.adoption-works__section-title .section-title__en {
+  text-transform: uppercase;
+}
+
+.adoption-works__items {
+  position: relative;
+  margin-top: rem(50);
+
+  @include mq("md") {
+    margin-top: rem(40);
+  }
+}
+
+.adoption-works__swiper {
+  margin-right: calc(50% - 50vw);
+}
+
+.adoption-works__swiper .swiper-wrapper {
+  align-items: stretch;
+}
+
+.adoption-works__swiper .swiper-slide {
+  height: auto;
+}
+
+.card-button-prev {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  top: rem(-105);
+  right: rem(68);
+}
+
+.card-button-prev::after {
+  content: "\f053";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: color 0.3s;
+  color: $black;
+}
+
+.card-button-next {
+  cursor: pointer;
+  display: block;
+  position: absolute;
+  top: rem(-105);
+  right: 0;
+}
+
+.card-button-next::after {
+  content: "\f054";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  transition: color 0.3s;
+  color: $black;
+}
+
+.card-button-next:hover::after,
+.card-button-prev:hover::after {
+  color: $green;
+}
+
+.card {
+  padding-top: rem(5);
+  border-bottom: 3px solid $black;
+  padding-bottom: rem(38);
+  transition: all 0.3s;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  height: 100%;
+}
+
+.card:hover {
+  opacity: 0.7;
+  border-bottom: 3px solid $green;
+}
+
+.card__link {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.card__wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  flex: 1;
+  position: relative;
+}
+
+.card__tag-wrapper {
+  position: absolute;
+  width: rem(169);
+  aspect-ratio: 145/38;
+  right: rem(-10);
+  top: rem(-4);
+  z-index: 2;
+}
+
+.card__tag-wrapper::after {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: url("../images/top/tag-bg.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+
+.card__tag {
+  color: $green;
+  font-weight: $medium;
+  font-size: rem(14);
+  z-index: 2;
+  position: relative;
+  text-align: center;
+  margin-top: rem(6);
+}
+
+.card__content {
+  line-height: calc(26 / 16);
+  width: 83%;
+  margin-top: rem(20);
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  justify-content: flex-end;
+  gap: rem(6);
+  @include mq("md") {
+    width: 90%;
+  }
+}
+
+.card__date {
+  font-size: rem(15);
+  font-weight: $medium;
+  color: $gray;
+  line-height: 1.6;
+  min-height: calc(1em * 1.6);
+  @include mq("md") {
+    font-size: rem(14);
+  }
+}
+
+.card__title {
+  font-size: rem(16);
+  font-weight: $bold;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  line-height: 1.6;
+  min-height: calc(1em * 1.6 * 2);
+  @include mq("md") {
+    font-size: rem(15);
+  }
+}
