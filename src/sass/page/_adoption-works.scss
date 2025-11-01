@@ -192,8 +192,6 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
   line-height: 1.6;
   min-height: calc(1em * 1.6 * 2);
   @include mq("md") {

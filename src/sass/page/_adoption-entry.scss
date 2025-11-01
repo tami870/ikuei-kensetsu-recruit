@@ -108,9 +108,20 @@
   }
 }
 
-.adoption-entry__tel a,
-.adoption-entry__mail a {
+.adoption-entry__tel,
+.adoption-entry__mail {
   color: $green;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.adoption-entry__tel:hover,
+.adoption-entry__tel:focus-visible,
+.adoption-entry__mail:hover,
+.adoption-entry__mail:focus-visible {
+  color: darken($green, 10%);
+  text-decoration: underline;
+  outline: none;
+  transform: scale(1.02);
 }
 
 .adoption-entry__mail {

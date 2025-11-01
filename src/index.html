@@ -7,6 +7,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="育栄建設株式会社の公式サイト。事業内容や採用情報などを紹介しています。">
   <meta name="format-detection" content="telephone=no">
+
+  <!-- noindex -->
+  <meta name="robots" content="noindex, nofollow">
+
   <title>育栄建設株式会社｜採用情報</title>
 
   <!-- favicon -->
@@ -240,9 +244,8 @@
       </div>
     </section>
 
-    <section class="adoption-cards">
+    <div class="adoption-cards">
       <div class="adoption-cards__inner inner">
-
         <!-- ワイドカード（社長メッセージ） -->
         <article class="adoption-card adoption-card--wide">
           <figure class="adoption-card__image">
@@ -299,6 +302,7 @@
                 loading="lazy" decoding="async">
             </figure>
           </a>
+
         </article>
         <article class="adoption-card">
           <a href="./adoption/point/" class="adoption-card__link">
@@ -314,6 +318,7 @@
                 loading="lazy" decoding="async">
             </figure>
           </a>
+
         </article>
         <article class="adoption-card">
           <a href="./adoption/point/" class="adoption-card__link">
@@ -329,6 +334,7 @@
                 loading="lazy" decoding="async">
             </figure>
           </a>
+
         </article>
         <article class="adoption-card">
           <a href="./adoption/point/" class="adoption-card__link">
@@ -344,6 +350,7 @@
                 loading="lazy" decoding="async">
             </figure>
           </a>
+
         </article>
         <article class="adoption-card">
           <a href="./adoption/point/" class="adoption-card__link">
@@ -361,7 +368,7 @@
           </a>
         </article>
       </div>
-    </section>
+    </div>
 
     <section class="adoption-works">
       <div class="adoption-works__inner inner">
@@ -450,7 +457,7 @@
               </div>
 
               <div class="swiper-slide card">
-                <a href="./works/post-04.html" class="card__link">
+                <a href="./works/post-05.html" class="card__link">
                   <div class="card__wrapper">
                     <div class="card__tag-wrapper">
                       <p class="card__tag">公共工事</p>
@@ -468,7 +475,7 @@
               </div>
 
               <div class="swiper-slide card">
-                <a href="./works/post-04.html" class="card__link">
+                <a href="./works/post-06.html" class="card__link">
                   <div class="card__wrapper">
                     <div class="card__tag-wrapper">
                       <p class="card__tag">公共工事</p>
@@ -486,7 +493,7 @@
               </div>
 
               <div class="swiper-slide card">
-                <a href="./works/post-04.html" class="card__link">
+                <a href="./works/post-07.html" class="card__link">
                   <div class="card__wrapper">
                     <div class="card__tag-wrapper">
                       <p class="card__tag">公共工事</p>
@@ -649,9 +656,24 @@
   </footer>
 
   <div id="fb-root"></div>
-  <script async defer crossorigin="anonymous"
-    src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v13.0"></script>
+  <!-- <script async defer crossorigin="anonymous" src="https://connect.facebook.net/ja_JP/sdk.js#xfbml=1&version=v13.0">
+  </script> -->
 
+  <script>
+    window.fbAsyncInit = function () {
+      FB.init({
+        xfbml: true,
+        version: 'v21.0'
+      });
+    };
+    (function (d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/ja_JP/sdk.js';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
 </body>
 
 </html>
