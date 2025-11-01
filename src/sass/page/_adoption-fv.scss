@@ -3,36 +3,45 @@
 .adoption-fv {
   position: relative;
   width: 100%;
-  height: rem(657);
-  z-index: 10;
+  min-height: rem(657);
+  height: 49.398vw;
+  max-height: rem(1000);
+  margin-top: rem(68);
   overflow: visible;
-
-  @include mq(md) {
-    height: auto;
-    aspect-ratio: 375 / 480;
+  @include mq("md") {
+    margin-top: rem(60);
+    min-height: auto;
+    max-height: none;
+    aspect-ratio: 375/480;
   }
 }
 
-.adoption-fv__inner {
+.inner.adoption-fv__inner {
   position: relative;
-  width: 100%;
-  height: inherit;
-  overflow: hidden;
+  height: 100%;
+  @include mq("md") {
+    max-width: rem(550);
+  }
 }
 
-.adoption-fv__image {
+.adoption-fv::after {
+  background-image: url(../images/adoption/fv-pc.webp);
+  background-repeat: no-repeat;
+  background-size: cover;
+  content: "";
+  display: block;
+  position: absolute;
   width: 100%;
-  height: inherit;
-}
-
-.adoption-fv__image img {
-  width: 100%;
-  height: inherit;
-  object-fit: cover;
-  object-position: center;
-  // object-position: center 35%;
+  height: 100%;
+  inset: 0;
+  z-index: -1;
+  background-position: center;
   filter: brightness(0.8);
-  // transition: object-position 0.3s ease;
+
+  @include mq(md) {
+    background-size: 100% auto;
+    background-position: center top;
+  }
 }
 
 .adoption-fv__title {
@@ -42,26 +51,17 @@
   transform: translate(-50%, -50%);
   z-index: 80;
   text-align: center;
-}
-
-.adoption-fv__title img {
-  width: rem(386);
-  height: auto;
 
   @include mq(md) {
-    width: rem(224);
-    max-width: 80%;
+    top: clamp(rem(84), 25.6vw, rem(196));
   }
 }
 
-.adoption-fv__breadcrumb {
-  position: absolute;
-  top: 0;
-  right: 9%;
-  z-index: 90;
+.adoption-fv__title img {
+  width: clamp(rem(315), 29.02vw, rem(600));
+  height: auto;
 
-  @include mq("md") {
-    right: 5%;
-    top: rem(8);
+  @include mq(md) {
+    width: clamp(rem(120), 36vw, rem(300));
   }
 }

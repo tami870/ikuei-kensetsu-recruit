@@ -24,8 +24,13 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  padding-top: rem(45);
-  padding-bottom: rem(45);
+  padding-top: rem(44);
+  padding-bottom: rem(44);
+
+  @include mq(md) {
+    padding-top: rem(24);
+    padding-bottom: rem(24);
+  }
 }
 
 .adoption-entry__link {
@@ -42,7 +47,7 @@
   transition: opacity 0.3s ease;
 
   @include mq(md) {
-    font-size: rem(20);
+    font-size: rem(37);
   }
 }
 
@@ -52,11 +57,19 @@
 
 .adoption-entry__link i {
   position: absolute;
-  bottom: -15%;
-  right: -80%;
+  bottom: -10%;
+  right: calc(rem(-123) - ((100vw - rem(1024)) * 0.2288));
   font-size: rem(20);
   color: $white;
   pointer-events: none;
+
+  @include mq(lg) {
+    right: -60%;
+  }
+
+  @include mq(md) {
+    bottom: 0;
+  }
 }
 
 /* 右側ブロック */
@@ -91,11 +104,12 @@
   color: $green;
 
   @include mq(md) {
-    font-size: rem(20);
+    font-size: rem(28);
   }
 }
 
-.adoption-entry__tel a {
+.adoption-entry__tel a,
+.adoption-entry__mail a {
   color: $green;
 }
 
@@ -104,14 +118,10 @@
   align-items: center;
   gap: rem(8);
   font-size: rem(24);
+  font-weight: $bold;
   color: $green;
-}
 
-.adoption-entry__mail i {
-  font-size: rem(20);
-}
-
-.adoption-entry__mail a {
-  color: $green;
-  text-decoration: none;
+  @include mq(md) {
+    font-size: rem(20);
+  }
 }

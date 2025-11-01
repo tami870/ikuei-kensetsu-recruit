@@ -149,13 +149,13 @@ $(function () {
    =============================== */
 
   // headerの高さを取得（scssファイルでheader高さの分だけmainを下げる）
-  function setHeaderHeightVar() {
-    const headerHeight = document.querySelector("header").offsetHeight;
-    document.documentElement.style.setProperty(
-      "--header-height",
-      `${headerHeight}px`
-    );
-  }
+  // function setHeaderHeightVar() {
+  //   const headerHeight = document.querySelector("header").offsetHeight;
+  //   document.documentElement.style.setProperty(
+  //     "--header-height",
+  //     `${headerHeight}px`
+  //   );
+  // }
 
   // works-swiperスライダー
   window.addEventListener("load", setHeaderHeightVar);

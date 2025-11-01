@@ -48,11 +48,11 @@
   <header class="header js-header">
     <div class="header__inner">
 
-      <h1 class="header__logo">
+      <div class="header__logo">
         <a href="./" class="header__logoLink">
           <img src="./assets/images/top/logo.svg" alt="育栄建設株式会社" loading="lazy" decoding="async">
         </a>
-      </h1>
+      </div>
 
       <div class="header__drawer hamburger js-hamburger">
         <span></span>
@@ -224,21 +224,19 @@
 
   <main class="adoption-main">
     <section class="adoption-fv">
-      <div class="adoption-fv__inner">
-        <figure class="adoption-fv__image">
-          <img src="./assets/images/adoption/fv-pc.webp" alt="育栄建設 採用情報ファーストビュー" loading="lazy" decoding="async">
-        </figure>
-        <h2 class="adoption-fv__title">
+      <div class="inner adoption-fv__inner">
+
+        <div class="adoption-fv__breadcrumb breadcrumb" typeof="BreadcrumbList" vocab="https://schema.org/">
+          <a href="https://ikuei-kensetsu.web-aicode.com/" property="item" typeof="WebPage">
+            <span property="name">HOME</span>
+          </a>
+          <span> ＞ </span>
+          <span property="name">採用情報</span>
+        </div>
+
+        <h1 class="adoption-fv__title">
           <img src="./assets/images/adoption/title.svg" alt="HAeru あなたの芽を育てる会社" loading="lazy" decoding="async">
-        </h2>
-      </div>
-      <!-- パンくず -->
-      <div class="adoption-fv__breadcrumb breadcrumb" typeof="BreadcrumbList" vocab="https://schema.org/">
-        <a href="./" property="item" typeof="WebPage">
-          <span property="name">HOME</span>
-        </a>
-        <span> ＞ </span>
-        <span property="name">採用情報</span>
+        </h1>
       </div>
     </section>
 
@@ -247,11 +245,15 @@
 
         <!-- ワイドカード（社長メッセージ） -->
         <article class="adoption-card adoption-card--wide">
+          <figure class="adoption-card__image">
+            <img src="./assets/images/adoption/message-pc.webp" alt="代表取締役 水落 清" loading="lazy" decoding="async">
+          </figure>
+
           <div class="adoption-card__content">
-            <h3 class="adoption-card__title">
-              私たちは「人の役に立ちたい」という想いを<br>
+            <h2 class="adoption-card__title">
+              私たちは「人の役に立ちたい」という想いを<br class="u-desktop">
               持つ方と一緒に働きたいと考えています。
-            </h3>
+            </h2>
             <p class="adoption-card__text">
               育栄建設は1983年に設立した浅草に本社をかまえる建設会社です。私たちが主に携わっているのは公共工事。公衆トイレをはじめ、学校や警察署、消防署、裁判所など、大小さまざま建築物を施工しています。おそらく皆さんの身近にも私たちの仕事の軌跡が残っています。
             </p>
@@ -263,9 +265,6 @@
               <a href="./adoption-message.html">社長メッセージを見る</a>
             </div>
           </div>
-          <figure class="adoption-card__image">
-            <img src="./assets/images/adoption/message-pc.webp" alt="代表取締役 水落 清" loading="lazy" decoding="async">
-          </figure>
         </article>
         <!-- ワイドカード（社長メッセージ）ここまで -->
 
@@ -274,7 +273,7 @@
           <a href="./adoption/point/" class="adoption-card__link">
             <div class="adoption-card__body">
               <div class="adoption-card__title section-title">
-                <h3 class="section-title__ja">育栄建設の魅力</h3>
+                <h2 class="section-title__ja">育栄建設の魅力</h2>
                 <span class="section-title__en">Appeal&ensp;of&ensp;Ikuei&ensp;Kensetsu</span>
               </div>
               <p class="adoption-card__text">年齢や役職の垣根なく、ベテランも若手も意見交換ができる風通しの良い環境で、活気があり、明るい社風が特長です。</p>
@@ -290,7 +289,7 @@
           <a href="./adoption/point/" class="adoption-card__link">
             <div class="adoption-card__body">
               <div class="adoption-card__title section-title">
-                <h3 class="section-title__ja">社員メッセージ</h3>
+                <h2 class="section-title__ja">社員メッセージ</h2>
                 <span class="section-title__en">Messages&ensp;from&ensp;Our&ensp;Team</span>
               </div>
               <p class="adoption-card__text">育栄建設で働く社員たちが、仕事の魅力や日々のやりがい、仕事への想いなどをお伝えします。</p>
@@ -305,7 +304,7 @@
           <a href="./adoption/point/" class="adoption-card__link">
             <div class="adoption-card__body">
               <div class="adoption-card__title section-title">
-                <h3 class="section-title__ja">協力会社メッセージ</h3>
+                <h2 class="section-title__ja">協力会社メッセージ</h2>
                 <span class="section-title__en">Messages&ensp;from&ensp;Our&ensp;Partners</span>
               </div>
               <p class="adoption-card__text">育栄建設を支える協力会社の皆様から寄せられた温かいメッセージと、その想いを丁寧にお届けします。</p>
@@ -320,7 +319,7 @@
           <a href="./adoption/point/" class="adoption-card__link">
             <div class="adoption-card__body">
               <div class="adoption-card__title section-title">
-                <h3 class="section-title__ja">育栄建設の仕事</h3>
+                <h2 class="section-title__ja">育栄建設の仕事</h2>
                 <span class="section-title__en">Our&ensp;Work</span>
               </div>
               <p class="adoption-card__text">豊富な経験と確かな技術で、建築・土木工事を通じて社会や地域の発展を支えています。</p>
@@ -335,7 +334,7 @@
           <a href="./adoption/point/" class="adoption-card__link">
             <div class="adoption-card__body">
               <div class="adoption-card__title section-title">
-                <h3 class="section-title__ja">キャリアアップ</h3>
+                <h2 class="section-title__ja">キャリアアップ</h2>
                 <span class="section-title__en">Career&ensp;Growth</span>
               </div>
               <p class="adoption-card__text">当社は人材育成に力を注いでいます。特に資格取得に向けたサポートに関しては時間と労力を惜しみません。</p>
@@ -350,7 +349,7 @@
           <a href="./adoption/point/" class="adoption-card__link">
             <div class="adoption-card__body">
               <div class="adoption-card__title section-title">
-                <h3 class="section-title__ja">募集要項</h3>
+                <h2 class="section-title__ja">募集要項</h2>
                 <span class="section-title__en">Application&ensp;Guidelines</span>
               </div>
               <p class="adoption-card__text">育栄建設の募集要項をご案内します。応募条件や待遇、勤務内容など詳しくご確認ください。</p>
@@ -391,7 +390,7 @@
                     </figure>
                     <div class="card__content">
                       <p class="card__date">2025年1月7日</p>
-                      <h3 class="card__title">樹木伐採清祓をしていただきました</h3>
+                      <h2 class="card__title">樹木伐採清祓をしていただきました</h2>
                     </div>
                   </div>
                 </a>
@@ -409,7 +408,7 @@
                     </figure>
                     <div class="card__content">
                       <p class="card__date">2025年1月7日</p>
-                      <h3 class="card__title">東京都港湾局から表彰されました！</h3>
+                      <h2 class="card__title">東京都港湾局から表彰されました！</h2>
                     </div>
                   </div>
                 </a>
@@ -426,7 +425,7 @@
                     </figure>
                     <div class="card__content">
                       <p class="card__date">2025年1月7日</p>
-                      <h3 class="card__title">万年塀をコンクリートブロック＋アルミフェンスに変更します⑧</h3>
+                      <h2 class="card__title">万年塀をコンクリートブロック＋アルミフェンスに変更します⑧</h2>
                     </div>
                   </div>
                 </a>
@@ -444,7 +443,7 @@
                     </figure>
                     <div class="card__content">
                       <p class="card__date">2025年1月7日</p>
-                      <h3 class="card__title">万年塀をコンクリートブロック＋アルミフェンスに変更します⑦</h3>
+                      <h2 class="card__title">万年塀をコンクリートブロック＋アルミフェンスに変更します⑦</h2>
                     </div>
                   </div>
                 </a>
@@ -462,7 +461,7 @@
                     </figure>
                     <div class="card__content">
                       <p class="card__date">2025年1月7日</p>
-                      <h3 class="card__title">万年塀をコンクリートブロック＋アルミフェンスに変更します⑦</h3>
+                      <h2 class="card__title">万年塀をコンクリートブロック＋アルミフェンスに変更します⑦</h2>
                     </div>
                   </div>
                 </a>
@@ -480,7 +479,7 @@
                     </figure>
                     <div class="card__content">
                       <p class="card__date">2025年1月7日</p>
-                      <h3 class="card__title">万年塀をコンクリートブロック＋アルミフェンスに変更します⑦</h3>
+                      <h2 class="card__title">万年塀をコンクリートブロック＋アルミフェンスに変更します⑦</h2>
                     </div>
                   </div>
                 </a>
@@ -498,7 +497,7 @@
                     </figure>
                     <div class="card__content">
                       <p class="card__date">2025年1月7日</p>
-                      <h3 class="card__title">万年塀をコンクリートブロック＋アルミフェンスに変更します⑦</h3>
+                      <h2 class="card__title">万年塀をコンクリートブロック＋アルミフェンスに変更します⑦</h2>
                     </div>
                   </div>
                 </a>
@@ -509,21 +508,19 @@
       </div>
     </section>
 
-
     <div class="adoption-entry">
       <div class="adoption-entry__inner">
         <!-- ENTRYボタン -->
         <div class="adoption-entry__block adoption-entry__block--left">
-          <a href="./entry/" class="adoption-entry__link" target="_blank" rel="noopener noreferrer">
+          <a href="#" class="adoption-entry__link" target="_blank" rel="noopener noreferrer">
             entry
             <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
           </a>
         </div>
-
         <!-- 連絡情報 -->
         <div class="adoption-entry__block adoption-entry__block--right">
           <div class="adoption-entry__content">
-            <p class="adoption-entry__text">ご興味をお持ちの方は下記までお問い合わせください。</p>
+            <p class="adoption-entry__text">ご興味をお持ちの方は <br class="u-mobile">下記までお問い合わせください。</p>
             <p class="adoption-entry__tel">TEL.<a href="tel:0338746721">03-3874-6721</a></p>
             <p class="adoption-entry__mail">
               <i class="fa-solid fa-envelope" aria-hidden="true"></i>
@@ -533,7 +530,7 @@
         </div>
       </div>
       <div class="adoption-entry__image">
-        <img src="./assets/images/adoption/entry-view-pc.webp" alt="">
+        <img src="./assets/images/adoption/entry-view-pc.webp" alt="動物キャラクターたちが安全帽をかぶり、協力しながら舗装作業を進める温かみのある手描きイラスト。">
       </div>
     </div>
 
