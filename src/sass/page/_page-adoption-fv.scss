@@ -1,0 +1,53 @@
+@use "global" as *;
+
+.page-adoption-fv {
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  width: 100%;
+  aspect-ratio: 1300 / 560;
+  display: flex;
+  align-items: flex-end;
+}
+
+.page-adoption-fv--point {
+  background-image: url("../images/adoption/point-fv.webp");
+}
+
+.page-adoption-fv--training {
+  background-image: url("../images/adoption/training-fv.webp");
+}
+
+.page-adoption-fv--message {
+  background-image: url("../images/adoption/message-fv.webp");
+}
+
+.page-adoption-fv__inner {
+  padding: rem(77) rem(96);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.page-adoption-fv__title {
+  color: $green;
+  text-shadow: 0 4px 4px $white;
+}
+
+.page-adoption-fv__title--white {
+  color: $white;
+  text-shadow: none;
+}
+
+.page-adoption-fv__en {
+  display: block;
+  font-size: rem(24);
+  font-weight: $semibold;
+  text-align: center;
+}
+
+.page-adoption-fv__ja {
+  font-size: rem(64);
+  font-weight: $bold;
+  line-height: 1;
+}
