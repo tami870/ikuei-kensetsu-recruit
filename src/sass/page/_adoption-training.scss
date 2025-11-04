@@ -48,6 +48,10 @@
   }
 }
 
-.page-adoption-training__card {
+.page-adoption-training__cards {
   margin-top: rem(50);
+}
+
+.page-adoption-training__card:not(:first-of-type) {
+  margin-top: rem(45);
 }

@@ -8,8 +8,8 @@
 
 .training-card__inner {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   padding: rem(30) rem(79);
 
   @include mq(md) {
@@ -47,6 +47,6 @@
   font-size: rem(96);
   font-weight: $bold;
   line-height: 1;
-  flex-shrink: 0;
-  margin-left: rem(59);
+  letter-spacing: 0.05em;
+  margin-left: rem(67);
 }
