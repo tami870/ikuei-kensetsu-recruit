@@ -2,7 +2,7 @@
 
 .page-adoption-fv {
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   background-repeat: no-repeat;
   width: 100%;
   aspect-ratio: 1300 / 560;
@@ -23,10 +23,14 @@
 }
 
 .page-adoption-fv__inner {
-  padding: rem(77) rem(96);
+  padding: clamp(rem(30), 5.923vw, rem(77)) clamp(rem(37), 7.387vw, rem(96));
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+
+  @include mq(md) {
+    padding: clamp(rem(16), 4.267vw, rem(32));
+  }
 }
 
 .page-adoption-fv__title {
@@ -44,10 +48,18 @@
   font-size: rem(24);
   font-weight: $semibold;
   text-align: center;
+
+  @include mq(md) {
+    font-size: clamp(rem(12), 3.2vw, rem(16));
+  }
 }
 
 .page-adoption-fv__ja {
   font-size: rem(64);
   font-weight: $bold;
   line-height: 1;
+
+  @include mq(md) {
+    font-size: clamp(rem(22), 6.933vw, rem(40));
+  }
 }

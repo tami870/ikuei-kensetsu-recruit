@@ -1,0 +1,53 @@
+@use "global" as *;
+
+.page-adoption-training {
+  background-color: $bg-green;
+  padding-top: rem(62);
+  padding-bottom: rem(190);
+}
+
+.page-adoption-training__inner {
+}
+
+.page-adoption-training__contents {
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-top: rem(29);
+  padding-right: rem(50);
+  padding-left: rem(50);
+  padding-bottom: rem(66);
+}
+
+.page-adoption-training__section-heading {
+  margin: 0 auto;
+}
+
+.page-adoption-training__description {
+  margin-top: rem(25);
+}
+
+.page-adoption-training__heading {
+  font-size: rem(24);
+  line-height: calc(40 / 24);
+  font-weight: $bold;
+  color: $green;
+  text-align: center;
+}
+
+.page-adoption-training__text {
+  margin-top: rem(20);
+  font-size: rem(18);
+  font-weight: $regular;
+  line-height: calc(30 / 18);
+  color: $black;
+
+  @include mq(md) {
+    font-size: rem(14);
+  }
+}
+
+.page-adoption-training__card {
+  margin-top: rem(50);
+}

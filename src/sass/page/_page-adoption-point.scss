@@ -4,6 +4,11 @@
   background-color: $bg-green;
   padding-top: rem(58);
   padding-bottom: rem(155);
+
+  @include mq(md) {
+    padding-top: rem(60);
+    padding-bottom: rem(60);
+  }
 }
 
 .page-adoption-point__inner {
@@ -18,11 +23,20 @@
 
 .page-adoption-point__contents:not(:first-of-type) {
   margin-top: rem(100);
+
+  @include mq(md) {
+    margin-top: rem(60);
+  }
 }
 
 .page-adoption-point__section-heading.section-heading {
   margin-top: rem(-29);
   margin-left: rem(31);
+
+  @include mq(md) {
+    margin-top: rem(-14);
+    margin-left: rem(14);
+  }
 }
 
 .page-adoption-point__content {
@@ -39,6 +53,10 @@
   padding-right: rem(22);
   padding-bottom: rem(41);
   padding-left: rem(79);
+
+  @include mq(md) {
+    padding: rem(14);
+  }
 }
 
 .page-adoption-point__content--large {
@@ -46,6 +64,10 @@
   padding-right: rem(22);
   padding-bottom: rem(41);
   padding-left: rem(31);
+
+  @include mq(md) {
+    padding: rem(15);
+  }
 }
 
 .page-adoption-point__content--video {
@@ -53,6 +75,10 @@
   padding-right: rem(22);
   padding-bottom: rem(55);
   padding-left: rem(31);
+
+  @include mq(md) {
+    padding: rem(15);
+  }
 }
 
 .page-adoption-point__heading {
@@ -61,6 +87,10 @@
   font-size: rem(24);
   line-height: calc(40 / 24);
   text-align: center;
+
+  @include mq(md) {
+    font-size: rem(18);
+  }
 }
 
 .page-adoption-point__flex {
@@ -68,6 +98,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @include mq(md) {
+    margin-top: rem(14);
+    flex-direction: column;
+  }
 }
 
 .page-adoption-point__flex--even {
@@ -83,24 +118,38 @@
   font-weight: $regular;
   line-height: calc(30 / 18);
   color: $black;
+
+  @include mq(md) {
+    font-size: rem(14);
+  }
 }
 
 .page-adoption-point__image {
   flex-shrink: 0;
   width: 100%;
   height: auto;
-  max-width: rem(470);
-  aspect-ratio: 470/252;
 }
 
 .page-adoption-point__image--medium {
   margin-left: rem(14);
+  max-width: rem(470);
+  aspect-ratio: 470/252;
+
+  @include mq(md) {
+    margin-top: rem(14);
+    margin-left: 0;
+  }
 }
 
 .page-adoption-point__image--large {
   margin-right: rem(18);
   max-width: rem(502);
   aspect-ratio: 502/265;
+
+  @include mq(md) {
+    margin-top: rem(14);
+    margin-right: 0;
+  }
 }
 
 .page-adoption-point__image img {
@@ -117,6 +166,11 @@
   max-width: rem(808);
   aspect-ratio: 808 / 459;
   overflow: hidden;
+
+  @include mq(md) {
+    margin-top: rem(14);
+    aspect-ratio: 813 / 459;
+  }
 }
 
 .page-adoption-point__video iframe {
