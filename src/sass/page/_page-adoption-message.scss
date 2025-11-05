@@ -1,0 +1,92 @@
+@use "global" as *;
+
+.page-adoption-message {
+  padding-top: rem(45);
+  padding-bottom: rem(100);
+  background-color: $bg-green;
+
+  @include mq(md) {
+    padding: rem(30) rem(30);
+  }
+}
+
+.page-adoption-message__bg {
+  background-image: url("../images/adoption/message-bg01.webp"),
+    url("../images/adoption/message-bg02.webp");
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100% 70%, 100% 30%;
+  background-position: center top, center bottom;
+  max-width: rem(1100);
+  width: 100%;
+  margin: 0 auto;
+  padding-top: rem(47);
+  padding-right: rem(26);
+  padding-bottom: rem(41);
+  padding-left: rem(24);
+
+  @include mq(md) {
+    padding: rem(30);
+  }
+}
+
+.page-adoption-message__wrapper {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding-right: rem(47);
+  padding-left: rem(37);
+  padding-top: rem(39);
+  padding-bottom: rem(142);
+
+  @include mq(md) {
+    padding: rem(24);
+  }
+}
+
+.page-adoption-message__header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  // padding-right: rem(21);
+  padding-left: rem(79);
+
+  @include mq(md) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.page-adoption-message__logo img {
+  max-width: rem(333);
+  width: 100%;
+  height: auto;
+  aspect-ratio: 333/289;
+}
+
+.page-adoption-message__body {
+  margin-top: rem(84);
+}
+
+.page-adoption-message__body p,
+.page-adoption-message__name {
+  font-size: rem(18);
+  color: #000;
+  line-height: calc(35 / 18);
+}
+
+.page-adoption-message__body p {
+  font-weight: $regular;
+}
+
+.page-adoption-message__body p + p {
+  margin-top: rem(54);
+}
+
+.page-adoption-message__name {
+  text-align: right;
+  font-weight: $medium;
+  margin-top: rem(28);
+}
+
+.page-adoption-message__name--strong {
+  font-size: rem(24);
+  line-height: calc(35 / 24);
+}

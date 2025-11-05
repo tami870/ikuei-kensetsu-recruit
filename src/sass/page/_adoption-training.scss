@@ -4,6 +4,11 @@
   background-color: $bg-green;
   padding-top: rem(62);
   padding-bottom: rem(190);
+
+  @include mq(md) {
+    padding-top: rem(60);
+    padding-bottom: rem(60);
+  }
 }
 
 .page-adoption-training__inner {
@@ -18,6 +23,10 @@
   padding-right: rem(50);
   padding-left: rem(50);
   padding-bottom: rem(66);
+
+  @include mq(md) {
+    padding: rem(30) rem(20);
+  }
 }
 
 .page-adoption-training__section-heading {
@@ -26,6 +35,10 @@
 
 .page-adoption-training__description {
   margin-top: rem(25);
+
+  @include mq(md) {
+    margin-top: rem(20);
+  }
 }
 
 .page-adoption-training__heading {
@@ -34,14 +47,18 @@
   font-weight: $bold;
   color: $green;
   text-align: center;
+
+  @include mq(md) {
+    font-size: rem(18);
+  }
 }
 
 .page-adoption-training__text {
   margin-top: rem(20);
   font-size: rem(18);
-  font-weight: $regular;
+  font-weight: $medium;
   line-height: calc(30 / 18);
-  color: $black;
+  color: #000;
 
   @include mq(md) {
     font-size: rem(14);
@@ -50,8 +67,16 @@
 
 .page-adoption-training__cards {
   margin-top: rem(50);
+
+  @include mq(md) {
+    margin-top: rem(30);
+  }
 }
 
 .page-adoption-training__card:not(:first-of-type) {
   margin-top: rem(45);
+
+  @include mq(md) {
+    margin-top: rem(25);
+  }
 }
