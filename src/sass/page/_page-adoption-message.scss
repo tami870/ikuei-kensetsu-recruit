@@ -6,7 +6,8 @@
   background-color: $bg-green;
 
   @include mq(md) {
-    padding: rem(30) rem(30);
+    padding-top: rem(30);
+    padding-bottom: rem(30);
   }
 }
 
@@ -16,16 +17,17 @@
   background-repeat: no-repeat, no-repeat;
   background-size: 100% 70%, 100% 30%;
   background-position: center top, center bottom;
-  max-width: rem(1100);
-  width: 100%;
-  margin: 0 auto;
   padding-top: rem(47);
   padding-right: rem(26);
   padding-bottom: rem(41);
   padding-left: rem(24);
 
   @include mq(md) {
-    padding: rem(30);
+    padding: rem(20);
+    background-image: url("../images/adoption/message-bg02.webp");
+    background-repeat: repeat-y;
+    background-size: auto;
+    background-position: center top;
   }
 }
 
@@ -37,7 +39,7 @@
   padding-bottom: rem(142);
 
   @include mq(md) {
-    padding: rem(24);
+    padding: rem(30);
   }
 }
 
@@ -45,13 +47,18 @@
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  // padding-right: rem(21);
-  padding-left: rem(79);
+  padding-left: clamp(rem(40), 6.077vw, rem(79));
 
   @include mq(md) {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    padding-left: 0;
   }
+}
+
+.page-adoption-message__logo {
+  margin-top: rem(30);
 }
 
 .page-adoption-message__logo img {
@@ -59,34 +66,62 @@
   width: 100%;
   height: auto;
   aspect-ratio: 333/289;
+
+  @include mq(md) {
+    max-width: rem(167);
+  }
+}
+
+.page-adoption-message .page-adoption-fv__title {
+  text-shadow: none;
 }
 
 .page-adoption-message__body {
   margin-top: rem(84);
+
+  @include mq(md) {
+    margin-top: rem(30);
+  }
 }
 
-.page-adoption-message__body p,
+.page-adoption-message__text,
 .page-adoption-message__name {
   font-size: rem(18);
   color: #000;
   line-height: calc(35 / 18);
+
+  @include mq(md) {
+    font-size: rem(14);
+  }
 }
 
-.page-adoption-message__body p {
+.page-adoption-message__text {
   font-weight: $regular;
 }
 
-.page-adoption-message__body p + p {
+.page-adoption-message__text + .page-adoption-message__text {
   margin-top: rem(54);
+
+  @include mq(md) {
+    margin-top: rem(30);
+  }
 }
 
 .page-adoption-message__name {
   text-align: right;
   font-weight: $medium;
   margin-top: rem(28);
+
+  @include mq(md) {
+    margin-top: rem(24);
+  }
 }
 
 .page-adoption-message__name--strong {
   font-size: rem(24);
   line-height: calc(35 / 24);
+
+  @include mq(md) {
+    font-size: rem(20);
+  }
 }

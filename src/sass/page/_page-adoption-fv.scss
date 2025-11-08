@@ -5,21 +5,23 @@
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
-  aspect-ratio: 1300 / 560;
   display: flex;
   align-items: flex-end;
 }
 
 .page-adoption-fv--point {
   background-image: url("../images/adoption/point-fv.webp");
+  aspect-ratio: 1300 / 560;
 }
 
 .page-adoption-fv--training {
   background-image: url("../images/adoption/training-fv.webp");
+  aspect-ratio: 1300 / 568;
 }
 
 .page-adoption-fv--interview {
   background-image: url("../images/adoption/interview-fv.webp");
+  aspect-ratio: 1300 / 632;
 }
 
 .page-adoption-fv__inner {
@@ -52,6 +54,10 @@
   @include mq(md) {
     font-size: clamp(rem(12), 3.2vw, rem(16));
   }
+}
+
+.page-adoption-fv__title--white .page-adoption-fv__en {
+  font-weight: $regular;
 }
 
 .page-adoption-fv__ja {
