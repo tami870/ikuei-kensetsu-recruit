@@ -50,6 +50,7 @@
   font-size: rem(24);
   font-weight: $semibold;
   text-align: center;
+  line-height: calc(29 / 24);
 
   @include mq(md) {
     font-size: clamp(rem(12), 3.2vw, rem(16));
@@ -63,7 +64,7 @@
 .page-adoption-fv__ja {
   font-size: rem(64);
   font-weight: $bold;
-  line-height: 1;
+  line-height: calc(77 / 64);
 
   @include mq(md) {
     font-size: clamp(rem(22), 6.933vw, rem(40));

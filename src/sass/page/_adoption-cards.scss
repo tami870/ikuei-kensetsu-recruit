@@ -36,9 +36,9 @@
 
 .adoption-card {
   background-color: $white;
-  box-shadow: 0 rem(2) rem(8) rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  // box-shadow: 0 rem(2) rem(8) rgba(0, 0, 0, 0.1);
+  // overflow: hidden;
+  // transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .adoption-card:hover {
@@ -64,6 +64,10 @@
     padding-left: rem(24);
     padding-right: rem(24);
   }
+}
+
+.adoption-card__content {
+  margin-top: rem(6);
 }
 
 .adoption-card__title.section-title {
@@ -137,7 +141,8 @@
   align-items: flex-start;
   justify-content: space-between;
   background-color: $white;
-  margin-top: clamp(rem(-180), calc(rem(-330) + 14.7vw), rem(-135));
+  // margin-top: clamp(-180px, -330px + 14.7vw, -130px);
+  margin-top: rem(-134);
   padding: rem(53) rem(50);
   flex-direction: row-reverse;
 
