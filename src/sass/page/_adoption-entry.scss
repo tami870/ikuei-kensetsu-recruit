@@ -44,8 +44,6 @@
   text-transform: uppercase;
   transition: opacity 0.3s ease;
   margin-top: rem(-5);
-  margin-left: rem(19);
-
   @include mq(md) {
     font-size: rem(37);
   }
@@ -75,6 +73,9 @@
 /* 右側ブロック */
 .adoption-entry__block--right {
   background-color: $bg-green;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @include mq("md") {
     padding: rem(24);
@@ -84,9 +85,7 @@
 .adoption-entry__content {
   display: flex;
   flex-direction: column;
-  padding-top: rem(63);
-  padding-bottom: rem(30);
-  padding-left: rem(113);
+  justify-content: center;
 }
 
 .adoption-entry__text {

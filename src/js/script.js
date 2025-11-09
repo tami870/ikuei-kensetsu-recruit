@@ -155,35 +155,24 @@ $(function () {
 
 var swiperWorks = new Swiper(".js-works-swiper", {
   loop: true,
-  loopAdditionalSlides: "auto",
+  loopAdditionalSlides: 10, // ループ時の複製枚数を増やして端で止まるのを防止
   slidesPerGroup: 1, // 常に1枚ずつ移動
-  spaceBetween: 34,
+  spaceBetween: 50,
   centeredSlides: false,
   navigation: {
     nextEl: ".works-button-next",
     prevEl: ".works-button-prev",
   },
   breakpoints: {
-    // モバイル（767px以下）
-    0: {
-      slidesPerView: "auto",
-      spaceBetween: 20,
-    },
-    // PC（768px以上）
-    768: {
-      slidesPerView: "auto",
-      spaceBetween: 34,
-    },
-    // 大型PC（1201px以上）
-    1201: {
-      slidesPerView: "auto",
-      spaceBetween: 34,
-    },
-    // 超大型PC（1600px以上）
-    1600: {
-      slidesPerView: "auto",
-      spaceBetween: 34,
-    },
+    0: { slidesPerView: 1.3 },
+    390: { slidesPerView: 1.35 },
+    412: { slidesPerView: 1.42 },
+    430: { slidesPerView: 1.49 },
+    540: { slidesPerView: 1.84 },
+    768: { slidesPerView: 2.62 },
+    1024: { slidesPerView: 2.8 },
+    1201: { slidesPerView: 2.95 },
+    1600: { slidesPerView: 4.2 },
   },
   // 端での引っかかりをより確実に回避
   speed: 400,

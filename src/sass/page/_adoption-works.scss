@@ -44,8 +44,16 @@
 }
 
 .adoption-works__swiper .swiper-slide {
-  width: auto;
+  width: rem(344) !important;
   height: auto;
+  flex-shrink: 0;
+  box-sizing: border-box;
+
+  // モバイル版で250pxに固定（spaceBetweenは別途Swiperが追加）
+  @include mq("md") {
+    width: rem(250) !important;
+    flex-shrink: 0;
+  }
 }
 
 .works-button-prev.card-button-prev {
