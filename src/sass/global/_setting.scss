@@ -44,4 +44,10 @@ $gray: #7c7a79;
 body {
   font-family: $base-font;
   color: $black;
+
+  // 追加//
+  font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  font-feature-settings: "palt" 1, "kern" 1; /* プロポーショナル詰めを有効化 */
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
