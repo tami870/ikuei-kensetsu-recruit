@@ -25,11 +25,6 @@
   }
 }
 
-//ワイドカードと汎用カードの余白を調整
-.adoption-card--wide + .adoption-card {
-  margin-top: rem(-4);
-}
-
 /* ===============================================
    汎用カード
 =============================================== */
@@ -42,8 +37,17 @@
 }
 
 .adoption-card:hover {
-  transform: translateY(rem(-4));
-  box-shadow: 0 rem(6) rem(12) rgba(0, 0, 0, 0.15);
+  // transform: translateY(rem(-4));
+  // box-shadow: 0 rem(6) rem(12) rgba(0, 0, 0, 0.15);
+}
+
+.adoption-card:nth-of-type(2),
+.adoption-card:nth-of-type(3) {
+  margin-top: rem(-4);
+
+  @include mq(md) {
+    margin-top: 0;
+  }
 }
 
 .adoption-card__link {
@@ -55,19 +59,21 @@
 }
 
 .adoption-card__body {
-  padding-top: rem(44);
+  padding-top: rem(38);
   padding-left: rem(45);
   padding-right: rem(30);
+  padding-bottom: rem(16);
 
   @include mq(md) {
     padding-top: rem(20);
     padding-left: rem(24);
     padding-right: rem(24);
+    padding-bottom: rem(10);
   }
 }
 
 .adoption-card__content {
-  margin-top: rem(6);
+  margin-top: rem(9);
 }
 
 .adoption-card__title.section-title {
@@ -94,14 +100,14 @@
   font-weight: 900;
   position: absolute;
   right: 0;
-  top: 0;
-  font-size: rem(16);
+  top: -19%;
+  font-size: rem(20);
   transform: translateY(50%);
   color: $green;
 }
 
 .adoption-card__text {
-  margin-top: rem(40);
+  margin-top: rem(30);
   font-size: rem(16);
   line-height: calc(28 / 16);
   font-weight: $medium;
@@ -143,7 +149,7 @@
   background-color: $white;
   // margin-top: clamp(-180px, -330px + 14.7vw, -130px);
   margin-top: rem(-134);
-  padding: rem(53) rem(50);
+  padding: rem(53) rem(50) rem(70) rem(50);
   flex-direction: row-reverse;
 
   @include mq(md) {
@@ -158,9 +164,8 @@
   flex-shrink: 0;
   width: rem(446);
   aspect-ratio: 446 / 389;
-  overflow: hidden;
   margin-top: 0;
-  margin-left: rem(32);
+  margin-left: rem(35);
 
   @include mq(md) {
     margin: 0 auto rem(24);
@@ -186,16 +191,20 @@
   }
 }
 
+.adoption-card--wide .adoption-card__title span {
+  letter-spacing: -0.06em;
+}
+
 .adoption-card--wide .adoption-card__text {
-  margin-top: rem(30);
+  margin-top: rem(14);
   font-size: rem(16);
   font-weight: $medium;
-  line-height: calc(32 / 16);
-  letter-spacing: -0.05em;
+  line-height: 1.97;
+  letter-spacing: -0.023em;
 }
 
 .adoption-card--wide .adoption-card__name {
-  margin-top: rem(32);
+  margin-top: rem(26);
   font-size: rem(16);
   font-weight: $bold;
   line-height: calc(28 / 16);
@@ -203,7 +212,7 @@
 
 .adoption-card--wide .adoption-card__name--strong {
   font-size: rem(20);
-  line-height: calc(35 / 20);
+  line-height: 1.65;
 }
 
 .adoption-card--wide .adoption-card__name,
@@ -214,5 +223,5 @@
 }
 
 .adoption-card--wide .adoption-card__btn {
-  margin-top: rem(43);
+  margin-top: rem(57);
 }

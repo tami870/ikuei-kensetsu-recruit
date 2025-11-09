@@ -6,9 +6,7 @@
 
 .adoption-entry__inner {
   display: flex;
-  align-items: stretch;
-  justify-content: space-between;
-
+  justify-content: center;
   @include mq("md") {
     flex-direction: column;
   }
@@ -25,7 +23,7 @@
   justify-content: center;
   position: relative;
   padding-top: rem(44);
-  padding-bottom: rem(44);
+  padding-bottom: rem(49);
 
   @include mq(md) {
     padding-top: rem(24);
@@ -45,6 +43,8 @@
   position: relative;
   text-transform: uppercase;
   transition: opacity 0.3s ease;
+  margin-top: rem(-5);
+  margin-left: rem(19);
 
   @include mq(md) {
     font-size: rem(37);
@@ -57,8 +57,8 @@
 
 .adoption-entry__link i {
   position: absolute;
-  bottom: -10%;
-  right: calc(rem(-123) - ((100vw - rem(1024)) * 0.2288));
+  bottom: -12.5%;
+  right: calc(rem(-115) - ((100vw - rem(1024)) * 0.2288));
   font-size: rem(20);
   color: $white;
   pointer-events: none;
@@ -75,10 +75,6 @@
 /* 右側ブロック */
 .adoption-entry__block--right {
   background-color: $bg-green;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: left;
 
   @include mq("md") {
     padding: rem(24);
@@ -88,20 +84,26 @@
 .adoption-entry__content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  padding-top: rem(63);
+  padding-bottom: rem(30);
+  padding-left: rem(113);
 }
 
 .adoption-entry__text {
-  font-size: rem(16);
+  font-size: rem(17);
   font-weight: $bold;
   color: $black;
+  line-height: 1.5;
+  letter-spacing: 0.01em;
 }
 
 .adoption-entry__tel {
-  font-size: rem(47);
+  font-size: rem(50);
   font-family: $roboto-font;
   font-weight: 900;
   color: $green;
+  line-height: 1.2;
+  margin-top: rem(4);
 
   @include mq(md) {
     font-size: rem(28);
@@ -127,12 +129,17 @@
 .adoption-entry__mail {
   display: flex;
   align-items: center;
-  gap: rem(8);
-  font-size: rem(24);
+  gap: rem(16);
+  font-size: rem(22);
   font-weight: $bold;
   color: $green;
 
   @include mq(md) {
     font-size: rem(20);
+    gap: rem(12);
   }
+}
+
+.adoption-entry__mail i {
+  font-size: rem(28);
 }

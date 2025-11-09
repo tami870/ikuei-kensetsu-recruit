@@ -148,15 +148,6 @@ $(function () {
    たみ追加
    =============================== */
 
-  // headerの高さを取得（scssファイルでheader高さの分だけmainを下げる）
-  // function setHeaderHeightVar() {
-  //   const headerHeight = document.querySelector("header").offsetHeight;
-  //   document.documentElement.style.setProperty(
-  //     "--header-height",
-  //     `${headerHeight}px`
-  //   );
-  // }
-
   // works-swiperスライダー
   window.addEventListener("load", setHeaderHeightVar);
   window.addEventListener("resize", setHeaderHeightVar);
@@ -164,7 +155,7 @@ $(function () {
 
 var swiperWorks = new Swiper(".js-works-swiper", {
   loop: true,
-  loopAdditionalSlides: 10, // ループ時の複製枚数を増やして端で止まるのを防止
+  loopAdditionalSlides: "auto",
   slidesPerGroup: 1, // 常に1枚ずつ移動
   spaceBetween: 34,
   centeredSlides: false,
@@ -173,10 +164,26 @@ var swiperWorks = new Swiper(".js-works-swiper", {
     prevEl: ".works-button-prev",
   },
   breakpoints: {
-    0: { slidesPerView: 1.2 },
-    768: { slidesPerView: 2.5 },
-    1201: { slidesPerView: 3.2 },
-    1600: { slidesPerView: 4.2 },
+    // モバイル（767px以下）
+    0: {
+      slidesPerView: "auto",
+      spaceBetween: 20,
+    },
+    // PC（768px以上）
+    768: {
+      slidesPerView: "auto",
+      spaceBetween: 34,
+    },
+    // 大型PC（1201px以上）
+    1201: {
+      slidesPerView: "auto",
+      spaceBetween: 34,
+    },
+    // 超大型PC（1600px以上）
+    1600: {
+      slidesPerView: "auto",
+      spaceBetween: 34,
+    },
   },
   // 端での引っかかりをより確実に回避
   speed: 400,
