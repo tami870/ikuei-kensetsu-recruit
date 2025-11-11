@@ -165,31 +165,28 @@ $(function () {
    =============================== */
 
   // works-swiperスライダー
-  window.addEventListener("load", setHeaderHeightVar);
-  window.addEventListener("resize", setHeaderHeightVar);
-});
-
-var swiperWorks = new Swiper(".js-works-swiper", {
-  loop: true,
-  loopAdditionalSlides: 10, // ループ時の複製枚数を増やして端で止まるのを防止
-  slidesPerGroup: 1, // 常に1枚ずつ移動
-  spaceBetween: 50,
-  centeredSlides: false,
-  navigation: {
-    nextEl: ".works-button-next",
-    prevEl: ".works-button-prev",
-  },
-  breakpoints: {
-    0: { slidesPerView: 1.3 },
-    390: { slidesPerView: 1.35 },
-    412: { slidesPerView: 1.42 },
-    430: { slidesPerView: 1.49 },
-    540: { slidesPerView: 1.84 },
-    768: { slidesPerView: 2.62 },
-    1024: { slidesPerView: 2.8 },
-    1201: { slidesPerView: 2.95 },
-    1600: { slidesPerView: 4.2 },
-  },
-  // 端での引っかかりをより確実に回避
-  speed: 400,
+  var swiperWorks = new Swiper(".js-works-swiper", {
+    loop: true,
+    loopAdditionalSlides: 10, // ループ時の複製枚数を増やして端で止まるのを防止
+    slidesPerGroup: 1, // 常に1枚ずつ移動
+    spaceBetween: 50,
+    centeredSlides: false,
+    navigation: {
+      nextEl: ".works-button-next",
+      prevEl: ".works-button-prev",
+    },
+    breakpoints: {
+      0: { slidesPerView: 1.3 },
+      390: { slidesPerView: 1.35 },
+      412: { slidesPerView: 1.42 },
+      430: { slidesPerView: 1.49 },
+      540: { slidesPerView: 1.84 },
+      768: { slidesPerView: 2.62 },
+      1024: { slidesPerView: 2.8 },
+      1201: { slidesPerView: 2.95 },
+      1600: { slidesPerView: 4.2 },
+    },
+    // 端での引っかかりをより確実に回避
+    speed: 400,
+  });
 });

@@ -40,8 +40,13 @@ body {
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
-ul {
+ul,
+ol {
   list-style: none;
+}
+
+ol {
+  list-style-type: none;
 }
 
 /* A elements that don't have a class get default styles */
