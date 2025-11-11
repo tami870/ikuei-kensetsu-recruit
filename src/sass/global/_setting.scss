@@ -47,10 +47,4 @@ $gray: #7c7a79;
 body {
   font-family: $base-font;
   color: $black;
-
-  // たみ追加検討：ブラウザ間のフォントの差異を小さくする //
-  // font-family: "Yu Gothic", "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-  // font-feature-settings: "palt" 1, "kern" 1;
-  // -webkit-font-smoothing: antialiased;
-  // text-rendering: optimizeLegibility;
 }

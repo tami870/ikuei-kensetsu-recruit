@@ -2,4 +2,9 @@
 
 .adoption-main {
   font-family: $YuGothic-font;
+
+  // ブラウザ間のフォントの差異を小さくする
+  font-feature-settings: "palt" 1, "kern" 1;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }

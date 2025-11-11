@@ -1,27 +1,5 @@
 @use "global" as *;
 
-.page-adoption-interview {
-  background-color: $bg-green;
-  padding-top: rem(131);
-  padding-bottom: rem(197);
-
-  @include mq(md) {
-    padding-top: rem(80);
-    padding-bottom: rem(80);
-  }
-}
-
-.page-adoption-interview__list {
-}
-
-.page-adoption-interview__list:not(:first-child) {
-  margin-top: rem(236);
-
-  @include mq(md) {
-    margin-top: rem(100);
-  }
-}
-
 .interview__visual {
   position: relative;
   display: inline-block; //vertical-alignが効かず、画像の下に隙間ができてしまうのを防ぐ保険
@@ -43,52 +21,10 @@
   vertical-align: bottom;
 }
 
-.page-adoption-interview__section-heading {
-  position: absolute;
-  top: 0;
-  left: 11.137%;
-  z-index: 10;
-  transform: translateY(-56%);
-  font-weight: $bold;
-  color: $green;
-
-  @include mq(md) {
-    left: 6.6%;
-  }
-}
-
-.interview__visual--reverse .page-adoption-interview__section-heading {
-  left: auto;
-  right: 11.137%;
-
-  @include mq(md) {
-    right: 6.6%;
-  }
-}
-
-.page-adoption-interview__heading-text {
-  font-size: rem(40);
-  display: flex;
-  align-items: baseline;
-  gap: rem(8);
-
-  @include mq(md) {
-    font-size: rem(20);
-  }
-}
-
-.page-adoption-interview__heading-number {
-  font-size: rem(56);
-
-  @include mq(md) {
-    font-size: rem(28);
-  }
-}
-
 .interview__info {
   position: absolute;
   right: rem(57);
-  bottom: 0;
+  bottom: rem(-6);
   z-index: 20;
   background-color: rgba(214, 201, 0, 0.6);
   max-width: rem(250);
@@ -105,8 +41,13 @@
 }
 
 .interview__visual--reverse .interview__info {
-  left: rem(57);
+  left: rem(68);
   right: auto;
+  bottom: rem(4);
+  max-width: rem(235);
+  padding-top: rem(9);
+  padding-bottom: rem(7);
+  padding-left: rem(18);
 
   @include mq(md) {
     left: rem(16);
@@ -135,6 +76,10 @@
   }
 }
 
+.interview__name.interview__name--reverse {
+  gap: rem(30);
+}
+
 .interview__name-text {
   font-size: rem(24);
   font-weight: $semibold;
@@ -155,12 +100,32 @@
   }
 }
 
-.interview__body {
+.interview__body:nth-of-type(1) {
   margin-top: rem(118);
 
   @include mq(md) {
     margin-top: rem(60);
   }
+}
+
+.interview__body:nth-of-type(2) {
+  margin-top: rem(60);
+
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.interview__body:nth-of-type(3) {
+  margin-top: rem(64);
+
+  @include mq(md) {
+    margin-top: rem(40);
+  }
+}
+
+.interview__body:nth-of-type(3).interview__body--reverse {
+  margin-top: rem(86);
 }
 
 .interview__flex {

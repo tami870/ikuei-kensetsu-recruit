@@ -46,6 +46,10 @@
   text-shadow: none;
 }
 
+.page-adoption-fv__title--space-wide {
+  padding-bottom: clamp(rem(10), 2.923vw, rem(17));
+}
+
 .page-adoption-fv__en {
   display: block;
   font-size: rem(24);

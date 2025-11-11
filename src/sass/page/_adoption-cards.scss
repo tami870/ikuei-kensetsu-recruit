@@ -158,7 +158,6 @@
   align-items: flex-start;
   justify-content: space-between;
   background-color: $white;
-  // margin-top: clamp(-180px, -330px + 14.7vw, -130px);
   margin-top: rem(-134);
   padding: rem(53) rem(50) rem(70) rem(50);
   flex-direction: row-reverse;
@@ -167,7 +166,7 @@
     flex-direction: column;
     align-items: center;
     margin-top: rem(28);
-    padding: rem(40) rem(10);
+    padding: rem(40) rem(20);
   }
 }
 

@@ -13,10 +13,25 @@
   }
 }
 
-.page-adoption-appeal__section-heading.section-heading--even,
-.page-adoption-point__section-heading.section-heading--even {
+.section-heading.page-adoption-point__section-heading {
+  margin-top: rem(-28);
+  margin-left: rem(32);
+  color: #000;
+
+  @include mq(md) {
+    margin-top: rem(-14);
+    margin-left: rem(14);
+  }
+}
+
+.section-heading--even.page-adoption-appeal__section-heading {
   margin-left: auto;
   margin-right: rem(22);
+}
+
+.section-heading--even.page-adoption-point__section-heading {
+  margin-left: auto;
+  margin-right: rem(20);
 }
 
 .section-heading__text {
@@ -26,4 +41,22 @@
   text-decoration-thickness: 0.2em;
   text-underline-offset: -0.17em;
   text-decoration-skip-ink: none;
+  letter-spacing: rem(1.75);
+}
+
+.section-heading__text--benefit {
+  letter-spacing: rem(0.7);
+}
+
+.section-heading__text--culture {
+  text-underline-offset: 0;
+}
+
+.section-heading--reverse {
+  left: auto;
+  right: 11.137%;
+
+  @include mq(md) {
+    right: 6.6%;
+  }
 }

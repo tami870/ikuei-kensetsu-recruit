@@ -1,0 +1,57 @@
+@use "global" as *;
+
+.page-adoption-interview {
+  background-color: $bg-green;
+  padding-top: rem(131);
+  padding-bottom: rem(197);
+
+  @include mq(md) {
+    padding-top: rem(80);
+    padding-bottom: rem(80);
+  }
+}
+
+.page-adoption-interview__list:not(:first-child) {
+  margin-top: rem(238);
+
+  @include mq(md) {
+    margin-top: rem(100);
+  }
+}
+
+.page-adoption-interview__section-heading {
+  position: absolute;
+  top: 0;
+  left: 11.137%;
+  z-index: 10;
+  transform: translateY(-56%);
+  font-weight: $bold;
+  color: $green;
+
+  @include mq(md) {
+    left: 6.6%;
+  }
+}
+
+.page-adoption-interview__heading-text {
+  font-size: rem(40);
+  display: flex;
+  align-items: baseline;
+  gap: rem(19);
+
+  @include mq(md) {
+    font-size: rem(20);
+  }
+}
+
+.section-heading--reverse .page-adoption-interview__heading-text {
+  gap: rem(12);
+}
+
+.page-adoption-interview__heading-number {
+  font-size: rem(56);
+
+  @include mq(md) {
+    font-size: rem(28);
+  }
+}

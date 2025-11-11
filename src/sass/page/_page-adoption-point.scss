@@ -3,7 +3,7 @@
 .page-adoption-point {
   background-color: $bg-green;
   padding-top: rem(60);
-  padding-bottom: rem(155);
+  padding-bottom: rem(154);
 
   @include mq(md) {
     padding-top: rem(60);
@@ -26,16 +26,6 @@
 
   @include mq(md) {
     margin-top: rem(60);
-  }
-}
-
-.page-adoption-point__section-heading.section-heading {
-  margin-top: rem(-28);
-  margin-left: rem(32);
-
-  @include mq(md) {
-    margin-top: rem(-14);
-    margin-left: rem(14);
   }
 }
 
@@ -62,7 +52,7 @@
 .page-adoption-point__content--large {
   padding-top: rem(41);
   padding-right: rem(22);
-  padding-bottom: rem(41);
+  padding-bottom: rem(40);
   padding-left: rem(31);
 
   @include mq(md) {
@@ -70,8 +60,8 @@
   }
 }
 
-.page-adoption-point__content--video {
-  padding-top: rem(28);
+.page-adoption-point__content--culture {
+  padding-top: rem(34);
   padding-right: rem(22);
   padding-bottom: rem(55);
   padding-left: rem(31);
@@ -87,15 +77,28 @@
   font-size: rem(24);
   line-height: calc(40 / 24);
   text-align: center;
-  padding-left: rem(20);
+  padding-left: rem(33);
 
   @include mq(md) {
     font-size: rem(18);
+    padding-left: 0;
   }
 }
 
+.page-adoption-point__heading--balance {
+  padding-left: rem(80);
+
+  @include mq(md) {
+    padding-left: 0;
+  }
+}
+
+.page-adoption-point__heading--culture {
+  padding-left: 0;
+}
+
 .page-adoption-point__flex {
-  margin-top: rem(35);
+  margin-top: rem(34);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -110,7 +113,7 @@
   flex-direction: row-reverse;
 }
 
-.page-adoption-point__flex--video {
+.page-adoption-point__flex--culture {
   flex-direction: column;
 }
 
@@ -118,11 +121,18 @@
   font-size: rem(18);
   font-weight: $regular;
   line-height: calc(30 / 18);
-  color: $black;
-  letter-spacing: 0.08em;
+  color: #000;
 
   @include mq(md) {
     font-size: rem(14);
+  }
+}
+
+.page-adoption-point__text--culture {
+  margin-top: rem(6);
+
+  @include mq(md) {
+    margin-top: 0;
   }
 }
 
@@ -162,16 +172,15 @@
 }
 
 .page-adoption-point__video {
-  margin-top: rem(5);
+  margin-top: rem(26);
   flex-shrink: 0;
   width: 100%;
   max-width: rem(808);
-  aspect-ratio: 808 / 459;
+  aspect-ratio: 800 / 450;
   overflow: hidden;
 
   @include mq(md) {
     margin-top: rem(14);
-    aspect-ratio: 813 / 459;
   }
 }
 

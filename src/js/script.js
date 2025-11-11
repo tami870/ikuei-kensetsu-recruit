@@ -176,8 +176,9 @@ $(function () {
       prevEl: ".works-button-prev",
     },
     breakpoints: {
-      0: { slidesPerView: 1.3 },
-      390: { slidesPerView: 1.35 },
+      0: { slidesPerView: 1.25 },
+      360: { slidesPerView: 1.29 },
+      390: { slidesPerView: 1.34 },
       412: { slidesPerView: 1.42 },
       430: { slidesPerView: 1.49 },
       540: { slidesPerView: 1.84 },
