@@ -1,8 +1,12 @@
 @use "global" as *;
 
 .page-adoption-main {
-  margin-top: rem(68);
+  // margin-top: rem(68);
+  margin-top: rem(83); //ピクパ比較用
   font-family: $inter-font;
+  -webkit-font-smoothing: antialiased; /* Chrome／Safari用 */
+  -moz-osx-font-smoothing: grayscale; /* Firefox（macOS）用 */
+  text-rendering: optimizeLegibility;
 
   @include mq(md) {
     margin-top: rem(60);

@@ -2,7 +2,7 @@
 
 .page-adoption-point {
   background-color: $bg-green;
-  padding-top: rem(58);
+  padding-top: rem(60);
   padding-bottom: rem(155);
 
   @include mq(md) {
@@ -22,7 +22,7 @@
 }
 
 .page-adoption-point__contents:not(:first-of-type) {
-  margin-top: rem(100);
+  margin-top: rem(130);
 
   @include mq(md) {
     margin-top: rem(60);
@@ -30,8 +30,8 @@
 }
 
 .page-adoption-point__section-heading.section-heading {
-  margin-top: rem(-29);
-  margin-left: rem(31);
+  margin-top: rem(-28);
+  margin-left: rem(32);
 
   @include mq(md) {
     margin-top: rem(-14);
@@ -87,6 +87,7 @@
   font-size: rem(24);
   line-height: calc(40 / 24);
   text-align: center;
+  padding-left: rem(20);
 
   @include mq(md) {
     font-size: rem(18);
@@ -118,6 +119,7 @@
   font-weight: $regular;
   line-height: calc(30 / 18);
   color: $black;
+  letter-spacing: 0.08em;
 
   @include mq(md) {
     font-size: rem(14);

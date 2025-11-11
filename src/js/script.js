@@ -1,5 +1,3 @@
-"use strict";
-
 jQuery(function ($) {
   // ハンバーガーメニューのクリックイベント
   $(".js-hamburger").click(function () {
@@ -44,8 +42,26 @@ jQuery(function ($) {
     });
   });
 
+  // 社員紹介アコーディオン
+  $(".js-staff-toggle").on("click", function () {
+    var $content = $(this)
+      .closest(".page-staff__article")
+      .find(".js-staff-content");
+    var $button = $(this);
+
+    $content.slideToggle(300, function () {
+      if ($content.is(":visible")) {
+        $button.find(".page-staff__toggle-text").text("閉じる");
+        $button.addClass("is-active");
+      } else {
+        $button.find(".page-staff__toggle-text").text("もっと見る");
+        $button.removeClass("is-active");
+      }
+    });
+  });
+
   //FVスライダー
-  var fvSwiper = new Swiper(".js-fv-swiper", {
+  const fvSwiper = new Swiper(".js-fv-swiper", {
     loop: true,
     slidesPerView: 1,
     centeredSlides: true,
@@ -67,8 +83,8 @@ jQuery(function ($) {
   });
 
   // Topicsスライダー
-  var swiper2 = new Swiper(".js-topics-swiper", {
-    loop: true,
+  const swiper2 = new Swiper(".js-topics-swiper", {
+    loop: false,
     spaceBetween: 34,
     centeredSlides: false,
     navigation: {
@@ -92,8 +108,8 @@ jQuery(function ($) {
   });
 
   // Blogスライダー
-  var swiper3 = new Swiper(".js-blog-swiper", {
-    loop: true,
+  const swiper3 = new Swiper(".js-blog-swiper", {
+    loop: false,
     spaceBetween: 34,
     centeredSlides: false,
     navigation: {
@@ -118,7 +134,7 @@ jQuery(function ($) {
 
   // sp-navアコーディオン
   $(".js-sp-accordion").on("click", function () {
-    var $subItems = $(this)
+    const $subItems = $(this)
       .closest(".sp-nav__item")
       .find(".sp-nav__sub-items")
       .first();

@@ -25,7 +25,8 @@
 }
 
 .page-adoption-fv__inner {
-  padding: clamp(rem(30), 5.923vw, rem(77)) clamp(rem(37), 7.387vw, rem(96));
+  padding-left: clamp(rem(37), 7.387vw, rem(96));
+  padding-bottom: clamp(rem(30), 5.923vw, rem(66));
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

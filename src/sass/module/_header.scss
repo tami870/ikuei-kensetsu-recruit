@@ -8,6 +8,7 @@
   background: #fff;
   z-index: 1000;
   transition: 0.3s;
+  display: none; //ピクパ確認用
   @include mq("md") {
     height: rem(60);
   }
