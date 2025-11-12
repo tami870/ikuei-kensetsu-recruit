@@ -11,6 +11,13 @@
   }
 }
 
+.page-adoption-interview__wrapper {
+  max-width: rem(1300);
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .page-adoption-interview__list:not(:first-child) {
   margin-top: rem(238);
 

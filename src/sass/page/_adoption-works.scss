@@ -36,7 +36,9 @@
 }
 
 .adoption-works__swiper {
-  margin-right: calc(50% - 50vw);
+  width: 100%;
+  max-width: rem(1100);
+  margin-inline: auto;
 }
 
 .adoption-works__swiper .swiper-wrapper {
@@ -44,15 +46,11 @@
 }
 
 .adoption-works__swiper .swiper-slide {
-  width: rem(344) !important;
+  width: 344px;
   height: auto;
   flex-shrink: 0;
-  box-sizing: border-box;
-
-  // モバイル版で250pxに固定（spaceBetweenは別途Swiperが追加）
   @include mq("md") {
-    width: rem(250) !important;
-    flex-shrink: 0;
+    width: 250px;
   }
 }
 
@@ -81,6 +79,10 @@
   transition: color 0.3s;
   color: $black;
   font-size: rem(20);
+
+  @include mq(md) {
+    left: rem(-15);
+  }
 }
 
 .works-button-next.card-button-next {
@@ -123,12 +125,11 @@
   display: flex;
   flex-direction: column;
   flex-shrink: 0;
-  max-width: rem(344);
-  width: 100%;
+  width: rem(344);
   height: 100%;
 
   @include mq(md) {
-    max-width: rem(250);
+    width: rem(250);
   }
 }
 

@@ -167,7 +167,8 @@ $(function () {
   // works-swiperスライダー
   var swiperWorks = new Swiper(".js-works-swiper", {
     loop: true,
-    loopAdditionalSlides: 10, // ループ時の複製枚数を増やして端で止まるのを防止
+    loopAdditionalSlides: 10,
+    slidesPerView: "auto",
     slidesPerGroup: 1, // 常に1枚ずつ移動
     spaceBetween: 50,
     centeredSlides: false,
@@ -176,16 +177,28 @@ $(function () {
       prevEl: ".works-button-prev",
     },
     breakpoints: {
-      0: { slidesPerView: 1.25 },
-      360: { slidesPerView: 1.29 },
-      390: { slidesPerView: 1.34 },
-      412: { slidesPerView: 1.42 },
-      430: { slidesPerView: 1.49 },
-      540: { slidesPerView: 1.84 },
-      768: { slidesPerView: 2.62 },
-      1024: { slidesPerView: 2.8 },
-      1201: { slidesPerView: 2.95 },
-      1600: { slidesPerView: 4.2 },
+      // 0: { slidesPerView: 1.25 },
+      // 360: { slidesPerView: 1.29 },
+      // 390: { slidesPerView: 1.34 },
+      // 412: { slidesPerView: 1.42 },
+      // 430: { slidesPerView: 1.49 },
+      // 540: { slidesPerView: 1.84 },
+      // 768: { slidesPerView: 2.62 },
+      // 1024: { slidesPerView: 2.8 },
+      // 1201: { slidesPerView: 2.95 },
+      // 1600: { slidesPerView: 4.2 },
+      0: {
+        slidesPerView: 1.2,
+      },
+      768: {
+        slidesPerView: 2.5,
+      },
+      1201: {
+        slidesPerView: 3.2,
+      },
+      1600: {
+        slidesPerView: 4.2,
+      },
     },
     // 端での引っかかりをより確実に回避
     speed: 400,
