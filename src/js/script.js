@@ -177,16 +177,6 @@ $(function () {
       prevEl: ".works-button-prev",
     },
     breakpoints: {
-      // 0: { slidesPerView: 1.25 },
-      // 360: { slidesPerView: 1.29 },
-      // 390: { slidesPerView: 1.34 },
-      // 412: { slidesPerView: 1.42 },
-      // 430: { slidesPerView: 1.49 },
-      // 540: { slidesPerView: 1.84 },
-      // 768: { slidesPerView: 2.62 },
-      // 1024: { slidesPerView: 2.8 },
-      // 1201: { slidesPerView: 2.95 },
-      // 1600: { slidesPerView: 4.2 },
       0: {
         slidesPerView: 1.2,
       },

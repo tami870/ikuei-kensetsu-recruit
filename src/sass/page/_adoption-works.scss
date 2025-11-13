@@ -36,24 +36,12 @@
 }
 
 .adoption-works__swiper {
-  // width: 100%;
-  // max-width: rem(1100);
-  // margin-inline: auto;
   margin-right: calc(50% - 50vw);
   overflow: visible;
 }
 
 .adoption-works__swiper .swiper-wrapper {
   align-items: stretch;
-}
-
-.adoption-works__swiper .swiper-slide {
-  width: 344px;
-  height: auto;
-  flex-shrink: 0;
-  @include mq("md") {
-    width: 250px;
-  }
 }
 
 .works-button-prev.card-button-prev {
