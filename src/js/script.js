@@ -159,16 +159,17 @@ $(function () {
       scrollable: "横スクロール",
     },
   });
+});
 
-  /* ===============================
+/* ===============================
    たみ追加
    =============================== */
 
-  // works-swiperスライダー
+// works-swiperスライダー
+$(function () {
   var swiperWorks = new Swiper(".js-works-swiper", {
     loop: true,
     loopAdditionalSlides: 10,
-    slidesPerView: "auto",
     slidesPerGroup: 1, // 常に1枚ずつ移動
     spaceBetween: 50,
     centeredSlides: false,
