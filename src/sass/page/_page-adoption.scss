@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.page-adoption {
+  color: $black2;
+  font-family: $inter-font;
+  -webkit-font-smoothing: antialiased; /* Chrome／Safari用 */
+  -moz-osx-font-smoothing: grayscale; /* Firefox（macOS）用 */
+  text-rendering: optimizeLegibility;
+}

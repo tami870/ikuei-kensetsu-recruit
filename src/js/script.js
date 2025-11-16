@@ -143,55 +143,51 @@ jQuery(function ($) {
     });
     $(this).toggleClass("is-active");
   });
-});
 
-// 記事本文内のtableをラップして横スクロール対応
-$(function () {
-  $(".article__content table").each(function () {
-    if (!$(this).parent().hasClass("table-scroll")) {
-      $(this).wrap('<div class="table-scroll"></div>');
-    }
+  // 記事本文内のtableをラップして横スクロール対応
+  $(function () {
+    $(".article__content table").each(function () {
+      if (!$(this).parent().hasClass("table-scroll")) {
+        $(this).wrap('<div class="table-scroll"></div>');
+      }
+    });
+
+    // ScrollHint 初期化
+    new ScrollHint(".js-scroll", {
+      i18n: {
+        scrollable: "横スクロール",
+      },
+    });
   });
 
-  // ScrollHint 初期化
-  new ScrollHint(".js-scroll", {
-    i18n: {
-      scrollable: "横スクロール",
-    },
-  });
-});
-
-/* ===============================
+  /* ===============================
    たみ追加
    =============================== */
 
-// works-swiperスライダー
-$(function () {
-  var swiperWorks = new Swiper(".js-works-swiper", {
-    loop: true,
-    loopAdditionalSlides: 10,
-    slidesPerGroup: 1, // 常に1枚ずつ移動
-    spaceBetween: 50,
-    centeredSlides: false,
-    navigation: {
-      nextEl: ".works-button-next",
-      prevEl: ".works-button-prev",
-    },
-    breakpoints: {
-      0: {
-        slidesPerView: 1.2,
+  // worksスライダー
+  $(function () {
+    var swiper4 = new Swiper(".js-works-swiper", {
+      loop: false,
+      spaceBetween: 34,
+      centeredSlides: false,
+      navigation: {
+        nextEl: ".works-button-next",
+        prevEl: ".works-button-prev",
       },
-      768: {
-        slidesPerView: 2.5,
+      breakpoints: {
+        0: {
+          slidesPerView: 1.2,
+        },
+        768: {
+          slidesPerView: 2.5,
+        },
+        1201: {
+          slidesPerView: 3.2,
+        },
+        1600: {
+          slidesPerView: 4.2,
+        },
       },
-      1201: {
-        slidesPerView: 3.2,
-      },
-      1600: {
-        slidesPerView: 4.2,
-      },
-    },
-    // 端での引っかかりをより確実に回避
-    speed: 400,
+    });
   });
 });

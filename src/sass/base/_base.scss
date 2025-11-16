@@ -69,24 +69,3 @@ main {
 iframe {
   border: none;
 }
-
-/* ===============================
-   たみ追加
- =============================== */
-
-// CSSメディアクエリで hover を無効化
-@media (hover: hover) and (pointer: fine) {
-  .btn:hover,
-  .adoption-card:hover {
-    opacity: 0.8;
-    transform: translateY(-4px);
-  }
-}
-
-@media (hover: none) and (pointer: coarse) {
-  .btn:hover,
-  .adoption-card:hover {
-    opacity: 1;
-    transform: none;
-  }
-}

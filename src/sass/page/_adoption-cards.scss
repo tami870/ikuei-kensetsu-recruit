@@ -33,11 +33,10 @@
   background-color: $white;
   box-shadow: 0 rem(2) rem(8) rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 .adoption-card:hover {
-  transform: translateY(rem(-4));
   box-shadow: 0 rem(6) rem(12) rgba(0, 0, 0, 0.15);
 }
 
@@ -76,7 +75,7 @@
   margin-top: rem(9);
 }
 
-.adoption-card__title.section-title {
+.section-title.adoption-card__title {
   margin-left: 0;
   margin-right: 0;
   text-align: left;
@@ -125,7 +124,7 @@
   }
 }
 
-.adoption-card__text--spacewide {
+.adoption-card__text--spaceWide {
   padding-right: rem(40);
 }
 

@@ -17,13 +17,13 @@ $padding-sp: 20px;
 $base-font: "Noto Sans JP", sans-serif;
 $serif-font: "Noto Serif JP", serif;
 
-// --たみ追加-------------------- //
+// --【たみ追加】-------------------- //
 $YuGothic-font: "游ゴシック体", "Yu Gothic", "Hiragino Kaku Gothic ProN",
   sans-serif;
 $roboto-font: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $inter-font: "Inter", "Noto Sans JP", "Roboto", "Helvetica Neue", Arial,
   sans-serif;
-// --たみ追加ここまで------------- //
+// --【たみ追加ここまで】------------- //
 
 //---------------------------
 // 文字の太さ
@@ -43,6 +43,10 @@ $black: #44403f;
 $green: #007e3c;
 $bg-green: #f5fbec;
 $gray: #7c7a79;
+
+// --【たみ追加】-------------------- //
+$black2: #000;
+// --【たみ追加ここまで】------------- //
 
 body {
   font-family: $base-font;
